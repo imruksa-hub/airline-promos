@@ -370,7 +370,7 @@ def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: s
         out[it["id"]] = it
     cutoff = (datetime.fromisoformat(now) - timedelta(days=KEEP_MISSING_DAYS)).isoformat()
     for pid, p in prev.items():
-        if pid in out or p.get("source") != "auto" or has_word(p["url"].lower(), NOISE_URL_WORDS):
+        if pid in out or p.get("source") != "auto" or has_word(p.get("url", "").lower(), NOISE_URL_WORDS):
             continue
         # If the airline failed this run, keep its old items untouched.
         if p["airline"] not in ok_airlines or p.get("last_seen", now) >= cutoff:

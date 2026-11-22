@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T12:55:19+07:00",
+ "updated": "2026-11-22T12:59:46+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -71,12 +71,12 @@
   {
    "airline": "airasia",
    "ok": true,
-   "count": 3
+   "count": 1
   },
   {
    "airline": "nokair",
    "ok": true,
-   "count": 4
+   "count": 2
   },
   {
    "airline": "lionair",
@@ -91,7 +91,7 @@
   {
    "airline": "vietjet",
    "ok": true,
-   "count": 0
+   "count": 1
   },
   {
    "airline": "scoot",
@@ -126,6 +126,19 @@
  ],
  "items": [
   {
+   "id": "0d88848ceb16",
+   "airline": "vietjet",
+   "title": "ตั๋วโปรโมชัน",
+   "description": "",
+   "url": "https://www.vietjetair.com/th/news/%E0%B8%95%E0%B8%B1%E0%B9%8B%E0%B8%A7%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B8%99-1697696882961",
+   "image": "",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:59:46+07:00",
+   "last_seen": "2026-11-22T12:59:46+07:00"
+  },
+  {
    "id": "ff8eadf4416f",
    "airline": "airasia",
    "title": "AirAsia MOVE | Discover deals on flights, hotels, rides & more",
@@ -136,7 +149,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
+   "last_seen": "2026-11-22T12:59:46+07:00"
   },
   {
    "id": "37b3c18aee79",
@@ -165,136 +178,6 @@
    "last_seen": "2026-11-22T12:55:19+07:00"
   },
   {
-   "id": "5d9ffdab681f",
-   "airline": "nokair",
-   "title": "สิทธิพิเศษเฉพาะสมาชิกบัตรเครดิต KTC MASTERCARD",
-   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
-   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC600.aspx ",
-   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
-   "type": "fare",
-   "deadline": "2026-12-31",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
-  },
-  {
-   "id": "8f0ccdb900a4",
-   "airline": "nokair",
-   "title": "สิทธิพิเศษเฉพาะสมาชิกบัตรเครดิต KTC MASTERCARD",
-   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
-   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC600.aspx",
-   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
-   "type": "fare",
-   "deadline": "2026-12-31",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
-  },
-  {
-   "id": "559af00c1d96",
-   "airline": "nokair",
-   "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
-   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
-   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC500.aspx ",
-   "image": "https://content.nokair.com/getattachment/640eb792-3270-4b39-a2ac-6eb02e1bccbc/.aspx",
-   "type": "fare",
-   "deadline": "2027-06-30",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
-  },
-  {
-   "id": "b30f00a42a36",
-   "airline": "nokair",
-   "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
-   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
-   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC500.aspx",
-   "image": "https://content.nokair.com/getattachment/640eb792-3270-4b39-a2ac-6eb02e1bccbc/.aspx",
-   "type": "fare",
-   "deadline": "2027-06-30",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
-  },
-  {
-   "id": "e4f06d5204fb",
-   "airline": "ana",
-   "title": "Announcements | Offers and Announcements | ANA",
-   "description": "Find more information about ANA Announcements.",
-   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/211014-alitalia/",
-   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:51:17+07:00"
-  },
-  {
-   "id": "83d8da6872ec",
-   "airline": "ana",
-   "title": "Swiss opens new route between Japan and Switzerland | Announcements | ANA Mileage Club | ANA",
-   "description": "ANA partner Swiss Opens New Route Between Japan and Switzerland in March 2020.",
-   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/191115-swiss/",
-   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:51:17+07:00"
-  },
-  {
-   "id": "66a78bfcfc67",
-   "airline": "ana",
-   "title": "Termination of Partnership with Adria Airways (JP) | Announcements | Offers and Announcements | ANA",
-   "description": "ANA and Adria Airways (JP) will conclude its mileage partnership.",
-   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/191010-jp/",
-   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:51:17+07:00"
-  },
-  {
-   "id": "b9c5c9838408",
-   "airline": "ana",
-   "title": "Award Reservations for Premium Economy | Announcements | Offers and Announcements | ANA",
-   "description": "Reservations are now open for ANA international Premium Economy flight rewards. Experience a full range of services and a new level of comfort on your next journey.",
-   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/py-flight-award/",
-   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:51:17+07:00"
-  },
-  {
-   "id": "77f325de329a",
-   "airline": "ana",
-   "title": "Announcements | Offers and Announcements | ANA",
-   "description": "Find more information about ANA Announcements.",
-   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/",
-   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:51:17+07:00"
-  },
-  {
-   "id": "61df6ce4b302",
-   "airline": "nokair",
-   "title": "โปรโมชั่นตั๋วนกแอร์",
-   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษทั้งเส้นทางในประเทศ และต่างประเทศ พร้อมสิทธิพิเศษจากบัตรเครดิตและพันธมิตร",
-   "url": "https://content.nokair.com/th/Booking/Promotion.aspx",
-   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
-   "type": "fare",
-   "deadline": "2027-06-30",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:47:23+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
-  },
-  {
    "id": "0149cc9e831d",
    "airline": "nokair",
    "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
@@ -321,32 +204,6 @@
    "last_seen": "2026-11-22T12:47:23+07:00"
   },
   {
-   "id": "7d26efe2a68c",
-   "airline": "nokair",
-   "title": "NokAir",
-   "description": "",
-   "url": "https://www.nokair.com/Flight/Lowfare",
-   "image": "",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:47:23+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
-  },
-  {
-   "id": "9799c69234a0",
-   "airline": "nokair",
-   "title": "Redeem - นกแอร์",
-   "description": "สายการบินของคนไทยเพื่อคนไทย สะอาด ปลอดภัย มั่นใจทุกเที่ยวบิน พร้อมมาตรการป้องกันการแพร่ระบาดไวรัส COVID-19 ขั้นสูงสุดตามมาตรฐานสากล เพื่อความปลอดภัยของผู้โดยสารทุกท่าน",
-   "url": "https://content.nokair.com/th/nok-fanclub/Redeem-Point.aspx",
-   "image": "",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:47:23+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
-  },
-  {
    "id": "4c9f95ea26e1",
    "airline": "cathay",
    "title": "Student Fare | Cathay TH",
@@ -357,7 +214,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
+   "last_seen": "2026-11-22T12:59:46+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -370,7 +227,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
+   "last_seen": "2026-11-22T12:59:46+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -383,7 +240,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
+   "last_seen": "2026-11-22T12:59:46+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -396,7 +253,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
+   "last_seen": "2026-11-22T12:59:46+07:00"
   },
   {
    "id": "949a65a518d6",
@@ -410,45 +267,6 @@
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
    "last_seen": "2026-11-22T12:47:23+07:00"
-  },
-  {
-   "id": "033d37709acb",
-   "airline": "cathay",
-   "title": "Reasons to book direct | Cathay Pacific",
-   "description": "Learn about the advantages of booking online flight tickets with Cathay Pacific. Book directly with us to experience 24/7 care, transparent fees, & much more.",
-   "url": "https://www.cathaypacific.com/cx/th_TH/book-a-trip/book-flights/reason-to-book-direct.html",
-   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
-  },
-  {
-   "id": "6e21bc9f08f3",
-   "airline": "cathay",
-   "title": "ค่าโดยสารชั้นประหยัด | Cathay TH",
-   "description": "",
-   "url": "https://www.cathaypacific.com/cx/th_TH/book-a-trip/book-flights/new-economy-fares.html",
-   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
-  },
-  {
-   "id": "2abef2ec0d8e",
-   "airline": "cathay",
-   "title": "Redeem Flight Awards | Cathay TH",
-   "description": "แลก Asia Miles สำหรับเที่ยวบินกับ Cathay Pacific ค้นหาเที่ยวบินที่พร้อมให้แลกและจองการเดินทางครั้งถัดไปของคุณด้วยไมล์สะสม",
-   "url": "https://www.cathaypacific.com/cx/th_TH/book-a-trip/redeem-flights/redeem-flight-awards.html",
-   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
   }
  ]
 }

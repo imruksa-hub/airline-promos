@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T12:47:23+07:00",
+ "updated": "2026-11-22T12:51:17+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -9,12 +9,12 @@
   "airasia": {
    "name": "Thai AirAsia",
    "name_th": "ไทยแอร์เอเชีย",
-   "url": "https://www.airasia.com/aa/promotions/th/th/"
+   "url": "https://www.airasia.com/promotions/th/th/"
   },
   "nokair": {
    "name": "Nok Air",
    "name_th": "นกแอร์",
-   "url": "https://www.nokair.com/"
+   "url": "https://content.nokair.com/th/Booking/Promotion.aspx"
   },
   "lionair": {
    "name": "Thai Lion Air",
@@ -59,7 +59,7 @@
   "ana": {
    "name": "ANA",
    "name_th": "ออล นิปปอน แอร์เวย์",
-   "url": "https://www.ana.co.jp/en/th/plan-book/promotions/"
+   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/"
   }
  },
  "status": [
@@ -71,12 +71,12 @@
   {
    "airline": "airasia",
    "ok": true,
-   "count": 1
+   "count": 3
   },
   {
    "airline": "nokair",
    "ok": true,
-   "count": 5
+   "count": 4
   },
   {
    "airline": "lionair",
@@ -121,10 +121,166 @@
   {
    "airline": "ana",
    "ok": true,
-   "count": 0
+   "count": 5
   }
  ],
  "items": [
+  {
+   "id": "ff8eadf4416f",
+   "airline": "airasia",
+   "title": "AirAsia MOVE | Discover deals on flights, hotels, rides & more",
+   "description": "Download AirAsia MOVE today and get only the best deals on flights, hotels, ride and more! Completing your travel, all in one app.",
+   "url": "https://www.airasia.com/snap/th/th",
+   "image": "",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "37b3c18aee79",
+   "airline": "airasia",
+   "title": "FlyBeyond Japan | AirAsia MOVE",
+   "description": "Get exclusive deals and promotions across Japan for your upcoming vacation. AirAsia MOVE brings you the latest flight deals and holiday promotions from Japan.",
+   "url": "https://www.airasia.com/campaigns/flybeyond-japan/th/th/",
+   "image": "https://www.airasia.com/campaigns/api/og?slug=%2Fflybeyond-japan%2Fth%2Fth&locale=en-gb&sig=e797fd49948edc12",
+   "type": "draw",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "7b1e1acd7ae6",
+   "airline": "airasia",
+   "title": "Promotions | AirAsia rewards",
+   "description": "Spend, convert or Snap & Earn* to win a dream trip, 50% bonus points and 6X AirAsia points with AirAsia cards",
+   "url": "https://www.airasia.com/rewards/regional-earn-campaign/th/th",
+   "image": "https://storage.googleapis.com/static.airasia.com/incubation/rewards/images/FB_OG_for_rewards_website_GSheet1200X630.png",
+   "type": "draw",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "5d9ffdab681f",
+   "airline": "nokair",
+   "title": "สิทธิพิเศษเฉพาะสมาชิกบัตรเครดิต KTC MASTERCARD",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC600.aspx ",
+   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
+   "type": "fare",
+   "deadline": "2026-12-31",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "8f0ccdb900a4",
+   "airline": "nokair",
+   "title": "สิทธิพิเศษเฉพาะสมาชิกบัตรเครดิต KTC MASTERCARD",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC600.aspx",
+   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
+   "type": "fare",
+   "deadline": "2026-12-31",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "559af00c1d96",
+   "airline": "nokair",
+   "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC500.aspx ",
+   "image": "https://content.nokair.com/getattachment/640eb792-3270-4b39-a2ac-6eb02e1bccbc/.aspx",
+   "type": "fare",
+   "deadline": "2027-06-30",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "b30f00a42a36",
+   "airline": "nokair",
+   "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC500.aspx",
+   "image": "https://content.nokair.com/getattachment/640eb792-3270-4b39-a2ac-6eb02e1bccbc/.aspx",
+   "type": "fare",
+   "deadline": "2027-06-30",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "e4f06d5204fb",
+   "airline": "ana",
+   "title": "Announcements | Offers and Announcements | ANA",
+   "description": "Find more information about ANA Announcements.",
+   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/211014-alitalia/",
+   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "83d8da6872ec",
+   "airline": "ana",
+   "title": "Swiss opens new route between Japan and Switzerland | Announcements | ANA Mileage Club | ANA",
+   "description": "ANA partner Swiss Opens New Route Between Japan and Switzerland in March 2020.",
+   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/191115-swiss/",
+   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "66a78bfcfc67",
+   "airline": "ana",
+   "title": "Termination of Partnership with Adria Airways (JP) | Announcements | Offers and Announcements | ANA",
+   "description": "ANA and Adria Airways (JP) will conclude its mileage partnership.",
+   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/191010-jp/",
+   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "b9c5c9838408",
+   "airline": "ana",
+   "title": "Award Reservations for Premium Economy | Announcements | Offers and Announcements | ANA",
+   "description": "Reservations are now open for ANA international Premium Economy flight rewards. Experience a full range of services and a new level of comfort on your next journey.",
+   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/py-flight-award/",
+   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "77f325de329a",
+   "airline": "ana",
+   "title": "Announcements | Offers and Announcements | ANA",
+   "description": "Find more information about ANA Announcements.",
+   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/announcements/",
+   "image": "https://www.ana.co.jp/common/image/og/default.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:51:17+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
   {
    "id": "61df6ce4b302",
    "airline": "nokair",
@@ -191,19 +347,6 @@
    "last_seen": "2026-11-22T12:47:23+07:00"
   },
   {
-   "id": "949a65a518d6",
-   "airline": "airasia",
-   "title": "โปรโมชั่นแอร์เอเชียไทย",
-   "description": "",
-   "url": "https://www.airasia.com/promotions/th/th/",
-   "image": "",
-   "type": "fare",
-   "deadline": "2027-09-30",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
-  },
-  {
    "id": "4c9f95ea26e1",
    "airline": "cathay",
    "title": "Student Fare | Cathay TH",
@@ -214,7 +357,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
+   "last_seen": "2026-11-22T12:51:17+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -227,7 +370,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
+   "last_seen": "2026-11-22T12:51:17+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -240,7 +383,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
+   "last_seen": "2026-11-22T12:51:17+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -251,6 +394,19 @@
    "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
    "type": "fare",
    "deadline": "2027-02-28",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:51:17+07:00"
+  },
+  {
+   "id": "949a65a518d6",
+   "airline": "airasia",
+   "title": "โปรโมชั่นแอร์เอเชียไทย",
+   "description": "",
+   "url": "https://www.airasia.com/promotions/th/th/",
+   "image": "",
+   "type": "fare",
+   "deadline": "2027-09-30",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
    "last_seen": "2026-11-22T12:47:23+07:00"

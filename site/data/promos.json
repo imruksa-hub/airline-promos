@@ -1,65 +1,161 @@
 {
- "updated": "2026-11-22T12:59:46+07:00",
+ "updated": "2026-11-22T13:23:24+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
    "name_th": "การบินไทย",
-   "url": "https://www.thaiairways.com/th-th/deals/"
+   "url": "https://www.thaiairways.com/th-th/deals/",
+   "category": "airline"
   },
   "airasia": {
    "name": "Thai AirAsia",
    "name_th": "ไทยแอร์เอเชีย",
-   "url": "https://www.airasia.com/promotions/th/th/"
+   "url": "https://www.airasia.com/promotions/th/th/",
+   "category": "airline"
   },
   "nokair": {
    "name": "Nok Air",
    "name_th": "นกแอร์",
-   "url": "https://content.nokair.com/th/Booking/Promotion.aspx"
+   "url": "https://content.nokair.com/th/Booking/Promotion.aspx",
+   "category": "airline"
   },
   "lionair": {
    "name": "Thai Lion Air",
    "name_th": "ไทยไลอ้อนแอร์",
-   "url": "https://www.lionairthai.com/th/Promotion"
+   "url": "https://www.lionairthai.com/th/Promotion",
+   "category": "airline"
   },
   "bangkokair": {
    "name": "Bangkok Airways",
    "name_th": "บางกอกแอร์เวย์ส",
-   "url": "https://www.bangkokair.com/th/promotions"
+   "url": "https://www.bangkokair.com/th/promotions",
+   "category": "airline"
   },
   "vietjet": {
    "name": "Thai Vietjet",
    "name_th": "ไทยเวียตเจ็ท",
-   "url": "https://www.vietjetair.com/th/pages/promotions"
+   "url": "https://www.vietjetair.com/th/pages/promotions",
+   "category": "airline"
   },
   "scoot": {
    "name": "Scoot",
    "name_th": "สกู๊ต",
-   "url": "https://www.flyscoot.com/th/promotions"
+   "url": "https://www.flyscoot.com/th/promotions",
+   "category": "airline"
   },
   "singapore": {
    "name": "Singapore Airlines",
    "name_th": "สิงคโปร์แอร์ไลน์",
-   "url": "https://www.singaporeair.com/en_UK/th/plan-travel/local-promotions/"
+   "url": "https://www.singaporeair.com/en_UK/th/plan-travel/local-promotions/",
+   "category": "airline"
   },
   "cathay": {
    "name": "Cathay Pacific",
    "name_th": "คาเธ่ย์ แปซิฟิค",
-   "url": "https://www.cathaypacific.com/cx/th_TH/offers.html"
+   "url": "https://www.cathaypacific.com/cx/th_TH/offers.html",
+   "category": "airline"
   },
   "emirates": {
    "name": "Emirates",
    "name_th": "เอมิเรตส์",
-   "url": "https://www.emirates.com/th/thai/special-offers/"
+   "url": "https://www.emirates.com/th/thai/special-offers/",
+   "category": "airline"
   },
   "qatar": {
    "name": "Qatar Airways",
    "name_th": "กาตาร์แอร์เวย์",
-   "url": "https://www.qatarairways.com/th-th/offers.html"
+   "url": "https://www.qatarairways.com/th-th/offers.html",
+   "category": "airline"
   },
   "ana": {
    "name": "ANA",
    "name_th": "ออล นิปปอน แอร์เวย์",
-   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/"
+   "url": "https://www.ana.co.jp/en/th/offers-and-announcements/",
+   "category": "airline"
+  },
+  "news-google": {
+   "name": "News (Google)",
+   "name_th": "ข่าวชิงโชค (Google News)",
+   "url": "https://news.google.com/rss/search?q=%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B9%82%E0%B8%8A%E0%B8%84%20OR%20%E0%B8%A5%E0%B8%B8%E0%B9%89%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%A5%20OR%20%22%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%81%22%20when%3A14d&hl=th&gl=TH&ceid=TH:th",
+   "category": "brand"
+  },
+  "news-bing": {
+   "name": "News (Bing)",
+   "name_th": "ข่าวชิงโชค (Bing News)",
+   "url": "https://www.bing.com/news/search?q=%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B9%82%E0%B8%8A%E0%B8%84&format=rss&setlang=th",
+   "category": "brand"
+  },
+  "ktc": {
+   "name": "KTC",
+   "name_th": "KTC",
+   "url": "https://www.ktc.co.th/promotion",
+   "category": "brand"
+  },
+  "scb": {
+   "name": "SCB",
+   "name_th": "ไทยพาณิชย์",
+   "url": "https://www.scb.co.th/th/personal-banking/promotions.html",
+   "category": "brand"
+  },
+  "kbank": {
+   "name": "KBank",
+   "name_th": "กสิกรไทย",
+   "url": "https://www.kasikornbank.com/th/promotion",
+   "category": "brand"
+  },
+  "krungsri": {
+   "name": "Krungsri",
+   "name_th": "กรุงศรี",
+   "url": "https://www.krungsri.com/th/promotions",
+   "category": "brand"
+  },
+  "seven": {
+   "name": "7-Eleven",
+   "name_th": "เซเว่น อีเลฟเว่น",
+   "url": "https://www.7eleven.co.th/",
+   "category": "brand"
+  },
+  "lotuss": {
+   "name": "Lotus's",
+   "name_th": "โลตัส",
+   "url": "https://www.lotuss.com/th",
+   "category": "brand"
+  },
+  "bigc": {
+   "name": "Big C",
+   "name_th": "บิ๊กซี",
+   "url": "https://www.bigc.co.th/",
+   "category": "brand"
+  },
+  "central": {
+   "name": "Central",
+   "name_th": "เซ็นทรัล",
+   "url": "https://www.central.co.th/th",
+   "category": "brand"
+  },
+  "tops": {
+   "name": "Tops",
+   "name_th": "ท็อปส์",
+   "url": "https://www.tops.co.th/th",
+   "category": "brand"
+  },
+  "ais": {
+   "name": "AIS",
+   "name_th": "AIS",
+   "url": "https://www.ais.th/",
+   "category": "brand"
+  },
+  "true": {
+   "name": "True",
+   "name_th": "ทรู",
+   "url": "https://www.true.th/",
+   "category": "brand"
+  },
+  "cocacola": {
+   "name": "Coca-Cola",
+   "name_th": "โคคา-โคล่า",
+   "url": "https://www.coca-cola.com/th/th",
+   "category": "brand"
   }
  },
  "status": [
@@ -122,9 +218,275 @@
    "airline": "ana",
    "ok": true,
    "count": 0
+  },
+  {
+   "airline": "news-google",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "news-bing",
+   "ok": true,
+   "count": 7
+  },
+  {
+   "airline": "ktc",
+   "ok": true,
+   "count": 1
+  },
+  {
+   "airline": "scb",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "kbank",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "krungsri",
+   "ok": true,
+   "count": 1
+  },
+  {
+   "airline": "seven",
+   "ok": true,
+   "count": 2
+  },
+  {
+   "airline": "lotuss",
+   "ok": true,
+   "count": 1
+  },
+  {
+   "airline": "bigc",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "central",
+   "ok": true,
+   "count": 1
+  },
+  {
+   "airline": "tops",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "ais",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "true",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "cocacola",
+   "ok": true,
+   "count": 1
   }
  ],
  "items": [
+  {
+   "id": "2a0fa83ab374",
+   "airline": "news-bing",
+   "title": "‘ช้างศึก’ แชมป์คิงส์คัพ! ยิง ‘ทาจิฯ’ 3-0 ‘สุภโชค’ เบิกร่อง-‘ธีร ...",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b028b10bcff4a8f8b26ab9268e3eb8b&url=https%3a%2f%2fwww.dailynews.co.th%2fnews%2f6368752%2f&c=16163137006650405441&mkt=en-us",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-17T20:30:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "5d10a750ce25",
+   "airline": "news-bing",
+   "title": "“สุภโชค” เผยใจ ยิงประตูได้ เหมือนจะร้องไห้ พาทีมไทยคว้าแชมป์ ...",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b028b10bcff4a8f8b26ab9268e3eb8b&url=https%3a%2f%2fwww.dailynews.co.th%2fnews%2f6369972%2f&c=4829911361366128484&mkt=en-us",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-18T11:50:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "e8471f9eed7a",
+   "airline": "news-bing",
+   "title": "สุภโชค นำทัพ! ประกาศ 11 ตัวจริง ทีมชาติไทย vs ทาจิกิสถาน รอบชิง ...",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b028b10bcff4a8f8b26ab9268e3eb8b&url=https%3a%2f%2fwww.msn.com%2fth-th%2fsports%2fother%2f%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B9%2582%25E0%25B8%258A%25E0%25B8%2584-%25E0%25B8%2599%25E0%25B8%25B3%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%259E-%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2581%25E0%25B8%25B2%25E0%25B8%25A8-11-%25E0%25B8%2595%25E0%25B8%25B1%25E0%25B8%25A7%25E0%25B8%2588%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2587-%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B8%25A1%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B9%2584%25E0%25B8%2597%25E0%25B8%25A2-vs-%25E0%25B8%2597%25E0%25B8%25B2%25E0%25B8%2588%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%25AA%25E0%25B8%2596%25E0%25B8%25B2%25E0%25B8%2599-%25E0%25B8%25A3%25E0%25B8%25AD%25E0%25B8%259A%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%2587-%25E0%25B8%2584%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B8%25AA%25E0%25B9%258C%25E0%25B8%2584%25E0%25B8%25B1%25E0%25B8%259E-%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B9%2589%25E0%25B8%2587%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B9%2588-52%2far-AA2hCtsk&c=4214396723680456637&mkt=en-us",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-17T10:59:42+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "defe087e2506",
+   "airline": "news-bing",
+   "title": "สาวจีนโชคหล่นทับ ถูกรางวัลแพ็กเกจท่องเที่ยว 500 ล้าน สุดท้าย ...",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b028b10bcff4a8f8b26ab9268e3eb8b&url=https%3a%2f%2fwww.msn.com%2fth-th%2fentertainment%2fcelebrities%2f%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%2588%25E0%25B8%25B5%25E0%25B8%2599%25E0%25B9%2582%25E0%25B8%258A%25E0%25B8%2584%25E0%25B8%25AB%25E0%25B8%25A5%25E0%25B9%2588%25E0%25B8%2599%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%259A-%25E0%25B8%2596%25E0%25B8%25B9%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B9%2581%25E0%25B8%259E%25E0%25B9%2587%25E0%25B8%2581%25E0%25B9%2580%25E0%25B8%2581%25E0%25B8%2588%25E0%25B8%2597%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B9%2588%25E0%25B8%25A2%25E0%25B8%25A7-500-%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599-%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B8%2597%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%258A%25E0%25B8%25B5%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%259E%25E0%25B8%25A5%25E0%25B8%25B4%25E0%25B8%2581-%25E0%25B9%2580%25E0%25B8%259B%25E0%25B9%2587%25E0%25B8%2599%25E0%25B8%25AB%25E0%25B8%2599%25E0%25B8%25B5%25E0%25B9%2589%2far-AA2hQTFM&c=15944726254354805703&mkt=en-us",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-20T08:58:07+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "ce9ff51921ca",
+   "airline": "news-bing",
+   "title": "LIVE ถ่ายทอดสด ทีมชาติไทย พบ ทาจิกิสถาน ดูบอลสดฟรี นัดชิงคิงส์คัพ 19.30 น.",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b028b10bcff4a8f8b26ab9268e3eb8b&url=https%3a%2f%2fwww.msn.com%2fth-th%2fnews%2fother%2flive-%25E0%25B8%2596%25E0%25B9%2588%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%2597%25E0%25B8%25AD%25E0%25B8%2594%25E0%25B8%25AA%25E0%25B8%2594-%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B8%25A1%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B9%2584%25E0%25B8%2597%25E0%25B8%25A2-%25E0%25B8%259E%25E0%25B8%259A-%25E0%25B8%2597%25E0%25B8%25B2%25E0%25B8%2588%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%25AA%25E0%25B8%2596%25E0%25B8%25B2%25E0%25B8%2599-%25E0%25B8%2594%25E0%25B8%25B9%25E0%25B8%259A%25E0%25B8%25AD%25E0%25B8%25A5%25E0%25B8%25AA%25E0%25B8%2594%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5-%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2594%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B8%2584%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B8%25AA%25E0%25B9%258C%25E0%25B8%2584%25E0%25B8%25B1%25E0%25B8%259E-1930-%25E0%25B8%2599%2far-AA2hz6LP&c=14517917062613152028&mkt=en-us",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-17T05:30:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "65e6f33cf76a",
+   "airline": "news-bing",
+   "title": "ดูบอลสด ไทย พบ ทาจิกิสถาน ฟุตบอลคิงส์คัพ ครั้งที่ 52 รอบชิง เวลา 19. ...",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b028b10bcff4a8f8b26ab9268e3eb8b&url=https%3a%2f%2fthethaiger.com%2fth%2fnews%2f1631707%2f&c=1541437467997030968&mkt=en-us",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-17T17:21:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "1c237e4aeec7",
+   "airline": "news-bing",
+   "title": "โมเมนต์สุดประทับใจ! \"ธีราทร\" เผยเบื้องหลังให้ \"ศุภณัฏฐ์-สุภโชค\" ขึ้นรับถ้วยแชมป์คิงส์คัพ 2026",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b028b10bcff4a8f8b26ab9268e3eb8b&url=https%3a%2f%2fwww.msn.com%2fth-th%2fnews%2fother%2f%25E0%25B9%2582%25E0%25B8%25A1%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B9%258C%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B9%2583%25E0%25B8%2588-%25E0%25B8%2598%25E0%25B8%25B5%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%25A3-%25E0%25B9%2580%25E0%25B8%259C%25E0%25B8%25A2%25E0%25B9%2580%25E0%25B8%259A%25E0%25B8%25B7%25E0%25B9%2589%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B8%25AB%25E0%25B8%25A5%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B9%2583%25E0%25B8%25AB%25E0%25B9%2589-%25E0%25B8%25A8%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B8%2593%25E0%25B8%25B1%25E0%25B8%258F%25E0%25B8%2590%25E0%25B9%258C-%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B9%2582%25E0%25B8%258A%25E0%25B8%2584-%25E0%25B8%2582%25E0%25B8%25B6%25E0%25B9%2589%25E0%25B8%2599%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%2596%25E0%25B9%2589%25E0%25B8%25A7%25E0%25B8%25A2%25E0%25B9%2581%25E0%25B8%258A%25E0%25B8%25A1%25E0%25B8%259B%25E0%25B9%258C%25E0%25B8%2584%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B8%25AA%25E0%25B9%258C%25E0%25B8%2584%25E0%25B8%25B1%25E0%25B8%259E-2026%2far-AA2hFt8w&c=11708514240184978342&mkt=en-us",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-18T10:51:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "3ea7d8a5af5b",
+   "airline": "ktc",
+   "title": "โปรโมชั่นเคลียร์หนี้เกลี้ยงรอบใหม่ แจกแล้วทั่วไทย ได้ลุ้นตลอดปี มากกว่า 600 รางวัล เคลียร์หนี้ ปี 69 กับ KTC PROUD",
+   "description": "โปรโมชั่น ดูรายละเอียดและเงื่อนไขโปรโมชั่นเพิ่มเติมได้ที่นี่เลย",
+   "url": "https://www.ktc.co.th/promotion/apply-credit-card-loan-offers/ktc-proud-cash-card/cleardebt69",
+   "image": "https://www.ktc.co.th/upload/pub/media/Promotion/cash-card/2024/AW_NOV24_337_Clear_Debt_68_BANNER_WEBSITE_KTC_3_SMALL_BANNER_379x285_KV.webp",
+   "type": "draw",
+   "deadline": "2027-02-20",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "e8e259105ba0",
+   "airline": "krungsri",
+   "title": "ข่าวสารและกิจกรรม",
+   "description": "",
+   "url": "https://www.krungsri.com/th/newsandactivities/sme-news",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "73d4718c8e7d",
+   "airline": "seven",
+   "title": "ภารกิจพิชิตรางวัล ช้อปครบรับเงินคืน",
+   "description": "24 ต.ค. - 23 พ.ย. 69",
+   "url": "https://www.7eleven.co.th/promotion/allmember/2348-mission",
+   "image": "https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/96fd592925414b8997746aae640d5527.jpg",
+   "type": "draw",
+   "deadline": "2026-11-23",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "b9a95a9b4c57",
+   "airline": "seven",
+   "title": "ภารกิจพิชิตรางวัล เนสท์เล่แจกแลกยิ้ม",
+   "description": "24 ต.ค. - 23 พ.ย. 69",
+   "url": "https://www.7eleven.co.th/promotion/allmember/3318-pro",
+   "image": "https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/7e6ca69412dd4edf919a5df22bb0aae7.png",
+   "type": "draw",
+   "deadline": "2026-11-23",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "905fe62c3efe",
+   "airline": "lotuss",
+   "title": "คริสต์มาสนี้ โค้ก ลุ้นโชคใหญ่ส่งท้ายปี",
+   "description": "สั่งซื้อสินค้าของโลตัส ออนไลน์ Lotus's Online สินค้าอาหารสดคุณภาพ บริการส่งฟรีด่วนใน 1 ชั่วโมง",
+   "url": "https://www.lotuss.com/th/promotion/coke-christmas-12nov-6jan27?utm_track=bt%3AtopBanners%2Cbid%3ACoke-Christmas-W46-Hero-0.jpg",
+   "image": "https://o2o-static.lotuss.com/Landing-page/weekly-brand-promotion/Y2026/WK46/landing-aam/Coke-Christmas-W46-Thumbnail.jpg",
+   "type": "draw",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "aeedeb86db26",
+   "airline": "central",
+   "title": "อุปกรณ์สำหรับกิจกรรมกลางแจ้ง & สันทนาการ | ช้อปของแท้ กับโค้ดลดเพิ่ม 12%* + รับคะแนน The 1",
+   "description": "อุปกรณ์สำหรับกิจกรรมกลางแจ้ง & สันทนาการ คุณภาพสูงมีจำหน่ายแล้วตอนนี้ที่ Central Online เรารับรองทุกชิ้น เป็นของแท้ ได้มาตรฐาน สั่งเลยตอนนี้ พร้อมจัดส่งทั่วประเทศ",
+   "url": "https://www.central.co.th/th/sports-travel/outdoor-recreation",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
+  {
+   "id": "e01e58cf0d23",
+   "airline": "cocacola",
+   "title": "แพสชั่นไหนซ่าไปให้สุดกับ \"โค้ก\"",
+   "description": "ลุ้นไปสุดกับประสบการณ์ระดับโลก! บินไปชม Premier League ถึงถิ่นที่อังกฤษ หรือ ลุ้นบัตร Tomorrowland 2026 แค่เลือกแพสชั่นที่ใช่แล้วซ่าไปให้สุดได้เลย!",
+   "url": "https://www.coca-cola.com/th/th/offerings/coke-passion-point",
+   "image": "https://www.coca-cola.com/content/dam/onexp/global/icons/coca-cola-default.png",
+   "type": "draw",
+   "deadline": "2026-12-13",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-22T13:23:24+07:00"
+  },
   {
    "id": "0d88848ceb16",
    "airline": "vietjet",
@@ -136,7 +498,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:59:46+07:00",
-   "last_seen": "2026-11-22T12:59:46+07:00"
+   "last_seen": "2026-11-22T13:23:24+07:00"
   },
   {
    "id": "ff8eadf4416f",
@@ -149,7 +511,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:59:46+07:00"
+   "last_seen": "2026-11-22T13:23:24+07:00"
   },
   {
    "id": "37b3c18aee79",
@@ -214,7 +576,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:59:46+07:00"
+   "last_seen": "2026-11-22T13:23:24+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -227,7 +589,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:59:46+07:00"
+   "last_seen": "2026-11-22T13:23:24+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -240,7 +602,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:59:46+07:00"
+   "last_seen": "2026-11-22T13:23:24+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -253,7 +615,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:59:46+07:00"
+   "last_seen": "2026-11-22T13:23:24+07:00"
   },
   {
    "id": "949a65a518d6",

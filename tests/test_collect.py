@@ -47,5 +47,23 @@ class Normalize(unittest.TestCase):
         self.assertEqual(c.normalize("http://Content.Nokair.com/th/a.aspx "), "https://content.nokair.com/th/a.aspx")
         self.assertEqual(c.normalize("https://x.com/a#top"), "https://x.com/a")
 
+FEED = """<?xml version="1.0"?><rss><channel>
+<item><title>แบรนด์ A ชวนลุ้นรางวัล ถึง 31 ธ.ค. 69 - ข่าวสด</title><link>https://n.example/1</link>
+<pubDate>Sat, 21 Nov 2026 03:00:00 GMT</pubDate><source url="https://k.example">ข่าวสด</source></item>
+<item><title>ตรวจหวย งวดนี้ ลุ้นรางวัลที่ 1</title><link>https://n.example/2</link>
+<pubDate>Sat, 21 Nov 2026 03:00:00 GMT</pubDate></item>
+<item><title>ชิงโชคเก่า</title><link>https://n.example/3</link><pubDate>Mon, 01 Sep 2026 03:00:00 GMT</pubDate></item>
+</channel></rss>"""
+
+class Feed(unittest.TestCase):
+    def test_feed(self):
+        c.fetch = lambda url: FEED
+        c.allowed = lambda url: True
+        items = c.collect_feed({"id": "news", "url": "https://n.example/rss"}, date(2026, 11, 22), lambda m: None)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["title"], "แบรนด์ A ชวนลุ้นรางวัล ถึง 31 ธ.ค. 69")
+        self.assertEqual(items[0]["deadline"], "2026-12-31")
+        self.assertEqual(items[0]["type"], "draw")
+
 if __name__ == "__main__":
     unittest.main()

@@ -3,7 +3,7 @@
   const DEMO = params.has("demo");
   const DATA_URL = DEMO ? "data/demo.json" : "data/promos.json";
   const TZ = "Asia/Bangkok";
-  const state = { type: "all", airline: "all", q: "", sort: "new", todayOnly: false };
+  const state = { cat: "all", type: "all", airline: "all", q: "", sort: "new", todayOnly: false };
   let data = { items: [], airlines: {}, status: [] };
 
   const $ = (id) => document.getElementById(id);
@@ -20,9 +20,12 @@
     return a ? a.name_th || a.name : id;
   }
 
+  const catOf = (id) => data.airlines[id]?.category || "airline";
+  const inCat = (i) => state.cat === "all" || catOf(i.airline) === state.cat;
+
   function filtered() {
     const q = state.q.trim().toLowerCase();
-    let items = data.items.filter((i) =>
+    let items = data.items.filter((i) => inCat(i) &&
       (state.type === "all" || i.type === state.type) &&
       (state.airline === "all" || i.airline === state.airline) &&
       (!state.todayOnly || bkkDate(i.first_seen) === todayStr) &&
@@ -39,13 +42,13 @@
     const isNew = bkkDate(i.first_seen) === todayStr;
     const left = i.deadline ? daysLeft(i.deadline) : null;
     const badges = [
-      `<span class="badge ${i.type === "draw" ? "draw" : ""}">${i.type === "draw" ? "🎁 ชิงโชค" : "🎫 โปรตั๋ว"}</span>`,
+      `<span class="badge ${i.type === "draw" ? "draw" : ""}">${i.type === "draw" ? "🎁 ชิงโชค" : (catOf(i.airline) === "airline" ? "🎫 โปรตั๋ว" : "🏷️ โปรโมชั่น")}</span>`,
       isNew ? `<span class="badge new">ใหม่วันนี้</span>` : "",
       left !== null && left <= 3 ? `<span class="badge soon">${left <= 0 ? "หมดเขตวันนี้" : `เหลือ ${left} วัน`}</span>` : "",
     ].join("");
     const thumb = i.image
       ? `<img src="${esc(safeUrl(i.image))}" alt="" loading="lazy" onerror="this.remove()">`
-      : (i.type === "draw" ? "🎁" : "✈️");
+      : (i.type === "draw" ? "🎁" : (catOf(i.airline) === "airline" ? "✈️" : "🏷️"));
     return `<a class="card" href="${esc(safeUrl(i.url))}" target="_blank" rel="noopener">
       <div class="thumb">${thumb}</div>
       <div class="body">
@@ -65,10 +68,14 @@
     empty.textContent = data.items.length
       ? "ไม่พบรายการที่ตรงกับตัวกรอง"
       : "ยังไม่มีข้อมูล ระบบจะดึงโปรโมชั่นรอบแรกหลังเปิดเว็บ";
-    const count = (t) => data.items.filter((i) => (t === "all" || i.type === t) && (state.airline === "all" || i.airline === state.airline)).length;
+    const count = (t) => data.items.filter((i) => inCat(i) && (t === "all" || i.type === t) && (state.airline === "all" || i.airline === state.airline)).length;
     ["all", "fare", "draw"].forEach((t) => ($("n-" + t).textContent = count(t)));
     document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.type === state.type));
-    document.querySelectorAll(".chip").forEach((b) => b.classList.toggle("active", b.dataset.airline === state.airline));
+    document.querySelectorAll(".chip").forEach((b) => {
+      b.classList.toggle("active", b.dataset.airline === state.airline);
+      b.hidden = b.dataset.airline !== "all" && state.cat !== "all" && catOf(b.dataset.airline) !== state.cat;
+    });
+    document.querySelectorAll(".cat").forEach((b) => b.classList.toggle("active", b.dataset.cat === state.cat));
   }
 
   function renderChrome() {
@@ -78,7 +85,7 @@
     }
     const withItems = new Set(data.items.map((i) => i.airline));
     const ids = Object.keys(data.airlines).filter((id) => withItems.has(id));
-    $("airlines").innerHTML = [`<button class="chip" data-airline="all">ทุกสายการบิน</button>`]
+    $("airlines").innerHTML = [`<button class="chip" data-airline="all">ทุกแหล่ง</button>`]
       .concat(ids.map((id) => `<button class="chip" data-airline="${esc(id)}">${esc(airlineName(id))}</button>`)).join("");
     $("status").innerHTML = (data.status || []).map((s) =>
       `<li>${esc(airlineName(s.airline))}: ${s.ok ? `<span class="ok">ดึงได้ ${s.count} รายการ</span>` : `<span class="fail">ดึงไม่สำเร็จ</span>`}</li>`).join("");
@@ -90,6 +97,10 @@
   });
   $("airlines").addEventListener("click", (e) => {
     const b = e.target.closest(".chip"); if (b) { state.airline = b.dataset.airline; render(); }
+  });
+  $("cats").addEventListener("click", (e) => {
+    const b = e.target.closest(".cat");
+    if (b) { state.cat = b.dataset.cat; state.airline = "all"; render(); }
   });
   $("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
   $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });

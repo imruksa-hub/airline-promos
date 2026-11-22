@@ -60,6 +60,18 @@
    "name": "ANA",
    "name_th": "ออล นิปปอน แอร์เวย์",
    "url": "https://www.ana.co.jp/en/th/promotions/"
+  },
+  "ktc": {
+   "name": "KTC",
+   "name_th": "KTC",
+   "url": "",
+   "category": "brand"
+  },
+  "news-google": {
+   "name": "News",
+   "name_th": "ข่าวชิงโชค (Google News)",
+   "url": "",
+   "category": "brand"
   }
  },
  "status": [],
@@ -158,6 +170,30 @@
    "image": "",
    "first_seen": "2026-11-18T09:00:00+07:00",
    "deadline": "2026-12-04",
+   "source": "demo"
+  },
+  {
+   "id": "demo8",
+   "airline": "ktc",
+   "type": "draw",
+   "title": "[ตัวอย่าง] ใช้จ่ายครบ ลุ้นรางวัลทริปต่างประเทศ",
+   "description": "ข้อความตัวอย่าง",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-22T09:00:00+07:00",
+   "deadline": "2026-12-31",
+   "source": "demo"
+  },
+  {
+   "id": "demo9",
+   "airline": "news-google",
+   "type": "draw",
+   "title": "[ตัวอย่าง] แบรนด์เครื่องดื่มชวนสแกนฝาลุ้นรางวัล",
+   "description": "ข่าวจาก สำนักข่าวตัวอย่าง",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-21T09:00:00+07:00",
+   "deadline": "2027-01-15",
    "source": "demo"
   }
  ]

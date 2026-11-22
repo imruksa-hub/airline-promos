@@ -55,3 +55,6 @@ h1{margin:0;font-size:1.6rem}
   .thumb{aspect-ratio:21/9;font-size:1.6rem}
   .grid{grid-template-columns:1fr}
 }
+.cats{display:flex;gap:0;border-bottom:1px solid var(--line);overflow-x:auto}
+.cat{flex:none;border:0;border-bottom:3px solid transparent;background:none;color:var(--muted);padding:8px 14px;font:inherit;font-weight:500;cursor:pointer}
+.cat.active{color:var(--text);border-bottom-color:var(--brand)}

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>รวมโปรสายการบิน</title>
-<meta name="description" content="รวมโปรโมชั่นตั๋วเครื่องบินและกิจกรรมชิงโชคของทุกสายการบิน อัปเดตทุกวัน">
+<title>รวมโปรและชิงโชค</title>
+<meta name="description" content="รวมโปรโมชั่นสายการบินและกิจกรรมชิงโชคจากแบรนด์ต่างๆ อัปเดตทุกวัน">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
 <body>
 <header class="top">
   <div class="wrap">
-    <h1>✈️ รวมโปรสายการบิน</h1>
-    <p class="sub">โปรตั๋วและกิจกรรมชิงโชคจากทุกสายการบินในที่เดียว <span id="updated"></span></p>
+    <h1>✈️🎁 รวมโปรและชิงโชค</h1>
+    <p class="sub">โปรสายการบินและกิจกรรมชิงโชคจากแบรนด์ต่างๆ ในที่เดียว <span id="updated"></span></p>
   </div>
 </header>
 
@@ -22,9 +22,14 @@
   <div id="demo-note" class="note" hidden>กำลังแสดง <b>ข้อมูลตัวอย่าง</b> เพื่อดูหน้าตาเว็บเท่านั้น ไม่ใช่โปรโมชั่นจริง</div>
 
   <section class="controls">
+    <div class="cats" id="cats">
+      <button class="cat active" data-cat="all">ทั้งหมด</button>
+      <button class="cat" data-cat="airline">✈️ สายการบิน</button>
+      <button class="cat" data-cat="brand">🛍️ แบรนด์ &amp; ห้าง</button>
+    </div>
     <div class="tabs" role="tablist">
       <button class="tab active" data-type="all">ทั้งหมด <span class="n" id="n-all"></span></button>
-      <button class="tab" data-type="fare">โปรตั๋ว <span class="n" id="n-fare"></span></button>
+      <button class="tab" data-type="fare">โปรโมชั่น <span class="n" id="n-fare"></span></button>
       <button class="tab" data-type="draw">ชิงโชค <span class="n" id="n-draw"></span></button>
     </div>
     <div class="row">
@@ -43,7 +48,7 @@
 </main>
 
 <footer class="wrap foot">
-  <p>ข้อมูลดึงอัตโนมัติจากหน้าโปรโมชั่นทางการของแต่ละสายการบิน โปรดตรวจเงื่อนไขที่หน้าเว็บของสายการบินก่อนจองหรือร่วมกิจกรรม เว็บนี้ไม่ได้ร่วมกิจกรรมชิงโชคแทนคุณ</p>
+  <p>ข้อมูลดึงอัตโนมัติจากหน้าโปรโมชั่นทางการของแต่ละแบรนด์และจากข่าว โปรดตรวจเงื่อนไขที่หน้าเว็บต้นทางก่อนจองหรือร่วมกิจกรรม เว็บนี้ไม่ได้ร่วมกิจกรรมชิงโชคแทนคุณ</p>
   <details><summary>สถานะการดึงข้อมูล</summary><ul id="status"></ul></details>
 </footer>
 <script src="app.js"></script>

@@ -22,6 +22,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import urllib.robotparser
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -293,6 +295,52 @@ def guess_deadline(text: str, today: date) -> str | None:
     return max(future).isoformat() if future else None
 
 
+# ------------------------------------------------------------------------- feeds
+
+# News about government lottery results also says "ลุ้นรางวัล"; we only want brand campaigns.
+FEED_EXCLUDE = ["หวย", "สลากกินแบ่ง", "ล็อตเตอรี่", "เลขเด็ด", "งวดนี้", "ตรวจหวย", "lottery"]
+
+
+def collect_feed(src: dict, today: date, log) -> list[dict]:
+    """News search feed (RSS): headlines about lucky draws from any brand."""
+    url = src["url"]
+    if not allowed(url):
+        log(f"  robots.txt disallows {url}; skipped")
+        return []
+    root = ET.fromstring(fetch(url).encode("utf-8"))
+    max_age = timedelta(days=src.get("max_age_days", 14))
+    items = []
+    for node in root.iter("item"):
+        title = clean(node.findtext("title"))
+        link = clean(node.findtext("link"))
+        publisher = clean(node.findtext("source"))
+        if not title or not link or has_word(title.lower(), FEED_EXCLUDE):
+            continue
+        try:
+            published = parsedate_to_datetime(node.findtext("pubDate")).astimezone(BKK)
+        except Exception:
+            published = None
+        if published and published.date() < today - max_age:
+            continue
+        if publisher and title.endswith(" - " + publisher):
+            title = title[: -len(publisher) - 3]
+        items.append({
+            "id": item_id(link),
+            "airline": src["id"],
+            "title": title[:200],
+            "description": f"ข่าวจาก {publisher}" if publisher else "",
+            "url": link,
+            "image": "",
+            "type": "draw",
+            "deadline": guess_deadline(title, today),
+            "published": published.isoformat() if published else None,
+            "kind": "feed",
+            "source": "auto",
+        })
+    log(f"  {len(items)} feed items")
+    return items
+
+
 # -------------------------------------------------------------------------- main
 
 def item_id(url: str) -> str:
@@ -356,6 +404,8 @@ def collect_source(src: dict, today: date, log) -> list[dict]:
             "deadline": guess_deadline(body, today),
             "source": "auto",
         })
+    if src.get("draws_only"):
+        items = [i for i in items if i["type"] == "draw"]
     return items
 
 
@@ -367,7 +417,7 @@ def load_json(path: Path, default):
 
 
 def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: str, today: date,
-          includes: dict[str, str] | None = None) -> list[dict]:
+          includes: dict[str, str] | None = None, keep_days: dict[str, int] | None = None) -> list[dict]:
     """Keep first_seen dates; drop items that vanished more than KEEP_MISSING_DAYS ago."""
     prev = {p["id"]: p for p in previous}
     out: dict[str, dict] = {}
@@ -376,7 +426,9 @@ def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: s
         it["first_seen"] = old.get("first_seen", now)
         it["last_seen"] = now
         out[it["id"]] = it
-    cutoff = (datetime.fromisoformat(now) - timedelta(days=KEEP_MISSING_DAYS)).isoformat()
+    def cutoff(airline: str) -> str:
+        days = (keep_days or {}).get(airline, KEEP_MISSING_DAYS)
+        return (datetime.fromisoformat(now) - timedelta(days=days)).isoformat()
     for pid, p in prev.items():
         if pid in out or p.get("source") != "auto" or has_word(p.get("url", "").lower(), NOISE_URL_WORDS):
             continue
@@ -384,7 +436,7 @@ def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: s
         if include and not re.search(include, p.get("url", "")):
             continue
         # If the airline failed this run, keep its old items untouched.
-        if p["airline"] not in ok_airlines or p.get("last_seen", now) >= cutoff:
+        if p["airline"] not in ok_airlines or p.get("last_seen", now) >= cutoff(p["airline"]):
             out[pid] = p
     # Expired deadlines go away.
     return [i for i in out.values() if not i.get("deadline") or i["deadline"] >= today.isoformat()]
@@ -401,7 +453,8 @@ def main() -> int:
     for src in sources:
         log(f"{src['name']}: {src['url']}")
         try:
-            items = collect_source(src, today, log)
+            collect = collect_feed if src.get("kind") == "feed" else collect_source
+            items = collect(src, today, log)
             fresh.extend(items)
             ok.add(src["id"])
             status.append({"airline": src["id"], "ok": True, "count": len(items)})
@@ -410,11 +463,12 @@ def main() -> int:
             status.append({"airline": src["id"], "ok": False, "error": str(e)[:200]})
 
     includes = {s["id"]: s["include"] for s in sources if s.get("include")}
-    auto = merge(previous, fresh, ok, now, today, includes)
+    keep_days = {s["id"]: s["keep_days"] for s in sources if s.get("keep_days")}
+    auto = merge(previous, fresh, ok, now, today, includes, keep_days)
     # The same promotion is often linked twice (image and "read more"): keep one per title.
     seen_titles, unique = set(), []
     for it in sorted(auto, key=lambda i: i.get("first_seen", "")):
-        key = (it["airline"], it["title"].strip().lower())
+        key = ("feed" if it.get("kind") == "feed" else it["airline"], it["title"].strip().lower())
         if key in seen_titles:
             continue
         seen_titles.add(key)
@@ -441,7 +495,8 @@ def main() -> int:
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps({
         "updated": now,
-        "airlines": {s["id"]: {"name": s["name"], "name_th": s["name_th"], "url": s["url"]} for s in sources},
+        "airlines": {s["id"]: {"name": s["name"], "name_th": s["name_th"], "url": s["url"],
+                               "category": s.get("category", "airline")} for s in sources},
         "status": status,
         "items": items,
     }, ensure_ascii=False, indent=1), encoding="utf-8")

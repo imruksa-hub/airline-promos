@@ -10,5 +10,19 @@
   {"id": "cathay", "name": "Cathay Pacific", "name_th": "คาเธ่ย์ แปซิฟิค", "url": "https://www.cathaypacific.com/cx/th_TH/offers.html", "include": "/offers/"},
   {"id": "emirates", "name": "Emirates", "name_th": "เอมิเรตส์", "url": "https://www.emirates.com/th/thai/special-offers/"},
   {"id": "qatar", "name": "Qatar Airways", "name_th": "กาตาร์แอร์เวย์", "url": "https://www.qatarairways.com/th-th/offers.html"},
-  {"id": "ana", "name": "ANA", "name_th": "ออล นิปปอน แอร์เวย์", "url": "https://www.ana.co.jp/en/th/offers-and-announcements/", "include": "(?i)/offers-and-announcements/(?!announcements)"}
+  {"id": "ana", "name": "ANA", "name_th": "ออล นิปปอน แอร์เวย์", "url": "https://www.ana.co.jp/en/th/offers-and-announcements/", "include": "(?i)/offers-and-announcements/(?!announcements)"},
+  {"id": "news-google", "name": "News (Google)", "name_th": "ข่าวชิงโชค (Google News)", "kind": "feed", "category": "brand", "keep_days": 14, "url": "https://news.google.com/rss/search?q=%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B9%82%E0%B8%8A%E0%B8%84%20OR%20%E0%B8%A5%E0%B8%B8%E0%B9%89%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%A5%20OR%20%22%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%81%22%20when%3A14d&hl=th&gl=TH&ceid=TH:th"},
+  {"id": "news-bing", "name": "News (Bing)", "name_th": "ข่าวชิงโชค (Bing News)", "kind": "feed", "category": "brand", "keep_days": 14, "url": "https://www.bing.com/news/search?q=%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B9%82%E0%B8%8A%E0%B8%84&format=rss&setlang=th"},
+  {"id": "ktc", "name": "KTC", "name_th": "KTC", "category": "brand", "draws_only": true, "url": "https://www.ktc.co.th/promotion"},
+  {"id": "scb", "name": "SCB", "name_th": "ไทยพาณิชย์", "category": "brand", "draws_only": true, "url": "https://www.scb.co.th/th/personal-banking/promotions.html"},
+  {"id": "kbank", "name": "KBank", "name_th": "กสิกรไทย", "category": "brand", "draws_only": true, "url": "https://www.kasikornbank.com/th/promotion"},
+  {"id": "krungsri", "name": "Krungsri", "name_th": "กรุงศรี", "category": "brand", "draws_only": true, "url": "https://www.krungsri.com/th/promotions"},
+  {"id": "seven", "name": "7-Eleven", "name_th": "เซเว่น อีเลฟเว่น", "category": "brand", "draws_only": true, "url": "https://www.7eleven.co.th/"},
+  {"id": "lotuss", "name": "Lotus's", "name_th": "โลตัส", "category": "brand", "draws_only": true, "url": "https://www.lotuss.com/th"},
+  {"id": "bigc", "name": "Big C", "name_th": "บิ๊กซี", "category": "brand", "draws_only": true, "url": "https://www.bigc.co.th/"},
+  {"id": "central", "name": "Central", "name_th": "เซ็นทรัล", "category": "brand", "draws_only": true, "url": "https://www.central.co.th/th"},
+  {"id": "tops", "name": "Tops", "name_th": "ท็อปส์", "category": "brand", "draws_only": true, "url": "https://www.tops.co.th/th"},
+  {"id": "ais", "name": "AIS", "name_th": "AIS", "category": "brand", "draws_only": true, "url": "https://www.ais.th/"},
+  {"id": "true", "name": "True", "name_th": "ทรู", "category": "brand", "draws_only": true, "url": "https://www.true.th/"},
+  {"id": "cocacola", "name": "Coca-Cola", "name_th": "โคคา-โคล่า", "category": "brand", "draws_only": true, "url": "https://www.coca-cola.com/th/th"}
 ]

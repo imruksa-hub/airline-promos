@@ -37,6 +37,7 @@ DELAY_SECONDS = 2.0          # pause between requests to the same airline
 MAX_DETAIL_PAGES = 12        # detail pages read per airline per run
 KEEP_MISSING_DAYS = 3        # keep an item this long after it disappears from the airline page
 BKK = timezone(timedelta(hours=7))
+DEBUG = "--debug" in sys.argv
 
 PROMO_WORDS = [
     "promo", "promotion", "deal", "offer", "sale", "discount", "special", "fare",
@@ -46,6 +47,11 @@ DRAW_WORDS = [
     "lucky draw", "luckydraw", "lucky-draw", "sweepstake", "giveaway", "contest",
     "win ", "winner", "prize", "campaign",
     "ชิงโชค", "ลุ้น", "รางวัล", "แจกฟรี", "ร่วมสนุก", "กิจกรรม",
+]
+NOISE_URL_WORDS = [
+    "login", "signin", "sign-in", "logout", "register", "privacy", "cookie", "careers",
+    "my-account", "myaccount", "profile", "manage-booking", "check-in", "checkin",
+    "help", "faq", "contact", "sitemap", "terms", "conditions-of-carriage",
 ]
 SKIP_WORDS = [
     "login", "signin", "sign-in", "register", "javascript:", "mailto:", "tel:",
@@ -142,6 +148,36 @@ def allowed(url: str) -> bool:
     return rp.can_fetch(USER_AGENT, url)
 
 
+_browser = None
+
+
+def render(url: str) -> str | None:
+    """Load a page in headless Chromium (for pages built with JavaScript).
+
+    Returns None when Playwright is not installed.
+    """
+    global _browser
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return None
+    if _browser is None:
+        pw = sync_playwright().start()
+        _browser = pw.chromium.launch()
+    page = _browser.new_page(locale="th-TH")
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        try:
+            page.wait_for_load_state("networkidle", timeout=15000)
+        except Exception:
+            pass
+        page.mouse.wheel(0, 4000)   # trigger lazy-loaded cards
+        page.wait_for_timeout(2000)
+        return page.content()
+    finally:
+        page.close()
+
+
 def fetch(url: str) -> str:
     req = urllib.request.Request(url, headers={
         "User-Agent": USER_AGENT,
@@ -169,7 +205,7 @@ def same_site(url: str, base: str) -> bool:
     return a == b or a.endswith("." + b) or b.endswith("." + a)
 
 
-def candidate_links(page_url: str, links: list[tuple[str, str]]) -> list[tuple[str, str]]:
+def candidate_links(page_url: str, links: list[tuple[str, str]], include: str | None = None) -> list[tuple[str, str]]:
     seen, out = set(), []
     page_norm = page_url.rstrip("/")
     for href, text in links:
@@ -180,7 +216,9 @@ def candidate_links(page_url: str, links: list[tuple[str, str]]) -> list[tuple[s
             continue
         if url.rstrip("/") == page_norm or url in seen:
             continue
-        if has_word(url, ["login", "signin", "privacy", "cookie", "careers"]):
+        if has_word(url.lower(), NOISE_URL_WORDS):
+            continue
+        if include and not re.search(include, url):
             continue
         haystack = f"{url} {text}"
         if not (has_word(haystack, PROMO_WORDS) or has_word(haystack, DRAW_WORDS)):
@@ -259,8 +297,25 @@ def collect_source(src: dict, today: date, log) -> list[dict]:
     if not allowed(url):
         log(f"  robots.txt disallows {url}; skipped")
         return []
-    page = parse(fetch(url))
-    links = candidate_links(url, page.links)
+    include = src.get("include")
+    links, error = [], None
+    try:
+        page = parse(fetch(url))
+        links = candidate_links(url, page.links, include)
+    except Exception as e:
+        error = e
+    if not links:
+        html = render(url)
+        if html is not None:
+            log("  using headless browser")
+            page = parse(html)
+            links = candidate_links(url, page.links, include)
+            error = None
+    if error:
+        raise error
+    if DEBUG:
+        for href, text in page.links:
+            log(f"    LINK {urllib.parse.urljoin(url, href)} | {clean(text)[:80]}")
     log(f"  {len(links)} candidate links")
     items = []
     for link, text in links[:MAX_DETAIL_PAGES]:
@@ -268,7 +323,13 @@ def collect_source(src: dict, today: date, log) -> list[dict]:
         if allowed(link):
             time.sleep(DELAY_SECONDS)
             try:
-                d = parse(fetch(link))
+                try:
+                    d = parse(fetch(link))
+                except Exception:
+                    html = render(link)
+                    if html is None:
+                        raise
+                    d = parse(html)
                 title = clean(d.meta.get("og:title") or d.title) or text
                 image = d.meta.get("og:image", "")
                 desc = clean(d.meta.get("og:description") or d.meta.get("description", ""))
@@ -309,7 +370,7 @@ def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: s
         out[it["id"]] = it
     cutoff = (datetime.fromisoformat(now) - timedelta(days=KEEP_MISSING_DAYS)).isoformat()
     for pid, p in prev.items():
-        if pid in out or p.get("source") != "auto":
+        if pid in out or p.get("source") != "auto" or has_word(p["url"].lower(), NOISE_URL_WORDS):
             continue
         # If the airline failed this run, keep its old items untouched.
         if p["airline"] not in ok_airlines or p.get("last_seen", now) >= cutoff:
@@ -353,6 +414,9 @@ def main() -> int:
     by_id.update({m["id"]: m for m in manual})   # manual wins over auto
     items = sorted(by_id.values(), key=lambda i: i.get("first_seen", ""), reverse=True)
 
+    if DEBUG:
+        log(f"Debug run: {len(items)} items, nothing written")
+        return 0
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps({
         "updated": now,

@@ -451,6 +451,18 @@ def main() -> int:
     now_dt = datetime.now(BKK).replace(microsecond=0)
     now, today = now_dt.isoformat(), now_dt.date()
     previous = load_json(OUTPUT, {}).get("items", [])
+    # Forget items from removed sources, and old items today's filters would reject.
+    by_src = {s["id"]: s for s in sources}
+    def still_valid(p: dict) -> bool:
+        src = by_src.get(p["airline"])
+        if src is None:
+            return p.get("source") != "auto"
+        if src.get("kind") == "feed":
+            return has_word(p["title"].lower(), FEED_REQUIRE)
+        if src.get("draws_only"):
+            return classify(f"{p.get('url', '')} {p['title']} {p.get('description', '')}") == "draw"
+        return True
+    previous = [p for p in previous if still_valid(p)]
 
     fresh, status, ok = [], [], set()
     for src in sources:

@@ -10,5 +10,5 @@
   {"id": "cathay", "name": "Cathay Pacific", "name_th": "คาเธ่ย์ แปซิฟิค", "url": "https://www.cathaypacific.com/cx/th_TH/offers.html", "include": "/offers/"},
   {"id": "emirates", "name": "Emirates", "name_th": "เอมิเรตส์", "url": "https://www.emirates.com/th/thai/special-offers/"},
   {"id": "qatar", "name": "Qatar Airways", "name_th": "กาตาร์แอร์เวย์", "url": "https://www.qatarairways.com/th-th/offers.html"},
-  {"id": "ana", "name": "ANA", "name_th": "ออล นิปปอน แอร์เวย์", "url": "https://www.ana.co.jp/en/th/offers-and-announcements/"}
+  {"id": "ana", "name": "ANA", "name_th": "ออล นิปปอน แอร์เวย์", "url": "https://www.ana.co.jp/en/th/offers-and-announcements/", "include": "(?i)/offers-and-announcements/(?!announcements)"}
 ]

@@ -1,0 +1,368 @@
+"""Collect airline promotions and lucky draws into site/data/promos.json.
+
+Python standard library only. Run:  python scraper/collect.py
+
+For each source in sources.json the script:
+  1. checks robots.txt and skips the page if crawling is not allowed,
+  2. downloads the airline's promotions page,
+  3. keeps links on the airline's own site that look like a promotion or lucky draw,
+  4. reads the title, image and description of each linked page (a few per airline),
+  5. merges the result with manual.json (hand-added items, e.g. Facebook posts)
+     and with the previous run, so we know when each item was first seen.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import urllib.robotparser
+from datetime import date, datetime, timedelta, timezone
+from html.parser import HTMLParser
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SOURCES = ROOT / "sources.json"
+MANUAL = ROOT / "manual.json"
+OUTPUT = ROOT / "site" / "data" / "promos.json"
+
+USER_AGENT = "AirlinePromosBot/0.1 (+https://github.com/; personal promotion aggregator)"
+TIMEOUT = 25
+DELAY_SECONDS = 2.0          # pause between requests to the same airline
+MAX_DETAIL_PAGES = 12        # detail pages read per airline per run
+KEEP_MISSING_DAYS = 3        # keep an item this long after it disappears from the airline page
+BKK = timezone(timedelta(hours=7))
+
+PROMO_WORDS = [
+    "promo", "promotion", "deal", "offer", "sale", "discount", "special", "fare",
+    "โปร", "ลด", "ราคาพิเศษ", "ข้อเสนอ", "ส่วนลด", "ดีล",
+]
+DRAW_WORDS = [
+    "lucky draw", "luckydraw", "lucky-draw", "sweepstake", "giveaway", "contest",
+    "win ", "winner", "prize", "campaign",
+    "ชิงโชค", "ลุ้น", "รางวัล", "แจกฟรี", "ร่วมสนุก", "กิจกรรม",
+]
+SKIP_WORDS = [
+    "login", "signin", "sign-in", "register", "javascript:", "mailto:", "tel:",
+    "privacy", "cookie", "terms-of-use", "careers", "#",
+]
+
+
+# --------------------------------------------------------------------------- HTML
+
+class LinkAndMetaParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.links: list[tuple[str, str]] = []
+        self.meta: dict[str, str] = {}
+        self.title = ""
+        self._href: str | None = None
+        self._text: list[str] = []
+        self._in_title = False
+        self.text_chunks: list[str] = []
+        self._skip_depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag in ("script", "style", "noscript"):
+            self._skip_depth += 1
+        elif tag == "a" and a.get("href"):
+            self._href = a["href"]
+            self._text = [a.get("title") or a.get("aria-label") or ""]
+        elif tag == "img" and self._href is not None:
+            self._text.append(a.get("alt") or "")
+        elif tag == "meta":
+            key = (a.get("property") or a.get("name") or "").lower()
+            if key and a.get("content"):
+                self.meta.setdefault(key, a["content"])
+        elif tag == "title":
+            self._in_title = True
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style", "noscript"):
+            self._skip_depth = max(0, self._skip_depth - 1)
+        elif tag == "a" and self._href is not None:
+            self.links.append((self._href, clean(" ".join(self._text))))
+            self._href = None
+        elif tag == "title":
+            self._in_title = False
+
+    def handle_data(self, data):
+        if self._skip_depth:
+            return
+        if self._in_title:
+            self.title += data
+        if self._href is not None:
+            self._text.append(data)
+        if data.strip():
+            self.text_chunks.append(data.strip())
+
+
+def clean(text: str) -> str:
+    return re.sub(r"\s+", " ", text or "").strip()
+
+
+def parse(html: str) -> LinkAndMetaParser:
+    p = LinkAndMetaParser()
+    try:
+        p.feed(html)
+    except Exception:  # broken markup: keep what we got
+        pass
+    return p
+
+
+# ------------------------------------------------------------------------ network
+
+_robots: dict[str, urllib.robotparser.RobotFileParser] = {}
+
+
+def allowed(url: str) -> bool:
+    parts = urllib.parse.urlsplit(url)
+    base = f"{parts.scheme}://{parts.netloc}"
+    rp = _robots.get(base)
+    if rp is None:
+        rp = urllib.robotparser.RobotFileParser(base + "/robots.txt")
+        try:
+            req = urllib.request.Request(base + "/robots.txt", headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                rp.parse(r.read().decode("utf-8", "replace").splitlines())
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403):
+                rp.disallow_all = True
+            else:
+                rp.allow_all = True
+        except Exception:
+            rp.allow_all = True
+        _robots[base] = rp
+    return rp.can_fetch(USER_AGENT, url)
+
+
+def fetch(url: str) -> str:
+    req = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept-Language": "th-TH,th;q=0.9,en;q=0.8",
+    })
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+        charset = r.headers.get_content_charset() or "utf-8"
+        return r.read().decode(charset, "replace")
+
+
+# ------------------------------------------------------------------ classification
+
+def has_word(text: str, words: list[str]) -> bool:
+    t = f" {text.lower()} "
+    return any(w in t for w in words)
+
+
+def classify(text: str) -> str:
+    return "draw" if has_word(text, DRAW_WORDS) else "fare"
+
+
+def same_site(url: str, base: str) -> bool:
+    a = urllib.parse.urlsplit(url).netloc.lower().removeprefix("www.")
+    b = urllib.parse.urlsplit(base).netloc.lower().removeprefix("www.")
+    return a == b or a.endswith("." + b) or b.endswith("." + a)
+
+
+def candidate_links(page_url: str, links: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    seen, out = set(), []
+    page_norm = page_url.rstrip("/")
+    for href, text in links:
+        if has_word(href, SKIP_WORDS) and not href.startswith("http"):
+            continue
+        url = urllib.parse.urljoin(page_url, href).split("#")[0]
+        if not url.startswith("http") or not same_site(url, page_url):
+            continue
+        if url.rstrip("/") == page_norm or url in seen:
+            continue
+        if has_word(url, ["login", "signin", "privacy", "cookie", "careers"]):
+            continue
+        haystack = f"{url} {text}"
+        if not (has_word(haystack, PROMO_WORDS) or has_word(haystack, DRAW_WORDS)):
+            continue
+        if len(text) < 4 and urllib.parse.urlsplit(url).path.count("/") < 2:
+            continue
+        seen.add(url)
+        out.append((url, text))
+    return out
+
+
+# ------------------------------------------------------------------------- dates
+
+EN_MONTHS = {m: i for i, m in enumerate(
+    ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+TH_MONTHS = {
+    "มกราคม": 1, "ม.ค.": 1, "กุมภาพันธ์": 2, "ก.พ.": 2, "มีนาคม": 3, "มี.ค.": 3,
+    "เมษายน": 4, "เม.ย.": 4, "พฤษภาคม": 5, "พ.ค.": 5, "มิถุนายน": 6, "มิ.ย.": 6,
+    "กรกฎาคม": 7, "ก.ค.": 7, "สิงหาคม": 8, "ส.ค.": 8, "กันยายน": 9, "ก.ย.": 9,
+    "ตุลาคม": 10, "ต.ค.": 10, "พฤศจิกายน": 11, "พ.ย.": 11, "ธันวาคม": 12, "ธ.ค.": 12,
+}
+_th_pat = "|".join(re.escape(k) for k in sorted(TH_MONTHS, key=len, reverse=True))
+RE_TH = re.compile(rf"(\d{{1,2}})\s*({_th_pat})\s*(\d{{2,4}})")
+RE_EN_DMY = re.compile(r"(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3,9})\.?,?\s+(\d{4})")
+RE_EN_MDY = re.compile(r"([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})")
+RE_ISO = re.compile(r"(20\d\d)-(\d\d)-(\d\d)")
+RE_NUM = re.compile(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b")
+
+
+def _year(y: int) -> int:
+    if y < 100:            # 69 -> 2569 (BE) or 26 -> 2026
+        y += 2500 if y >= 50 else 2000
+    if y > 2400:           # Buddhist Era
+        y -= 543
+    return y
+
+
+def _mk(y: int, m: int, d: int) -> date | None:
+    try:
+        return date(_year(y), m, d)
+    except ValueError:
+        return None
+
+
+def find_dates(text: str) -> list[date]:
+    out: list[date] = []
+    for d, mon, y in RE_TH.findall(text):
+        out.append(_mk(int(y), TH_MONTHS[mon], int(d)))
+    for d, mon, y in RE_EN_DMY.findall(text):
+        if mon[:3].lower() in EN_MONTHS:
+            out.append(_mk(int(y), EN_MONTHS[mon[:3].lower()], int(d)))
+    for mon, d, y in RE_EN_MDY.findall(text):
+        if mon[:3].lower() in EN_MONTHS:
+            out.append(_mk(int(y), EN_MONTHS[mon[:3].lower()], int(d)))
+    for y, m, d in RE_ISO.findall(text):
+        out.append(_mk(int(y), int(m), int(d)))
+    for d, m, y in RE_NUM.findall(text):
+        out.append(_mk(int(y), int(m), int(d)))
+    return [x for x in out if x and 2020 <= x.year <= 2035]
+
+
+def guess_deadline(text: str, today: date) -> str | None:
+    """The latest date mentioned that is not in the past, up to a year ahead."""
+    future = [d for d in find_dates(text) if today <= d <= today + timedelta(days=400)]
+    return max(future).isoformat() if future else None
+
+
+# -------------------------------------------------------------------------- main
+
+def item_id(url: str) -> str:
+    return hashlib.sha1(url.encode()).hexdigest()[:12]
+
+
+def collect_source(src: dict, today: date, log) -> list[dict]:
+    url = src["url"]
+    if not allowed(url):
+        log(f"  robots.txt disallows {url}; skipped")
+        return []
+    page = parse(fetch(url))
+    links = candidate_links(url, page.links)
+    log(f"  {len(links)} candidate links")
+    items = []
+    for link, text in links[:MAX_DETAIL_PAGES]:
+        title, image, desc, body = text, "", "", text
+        if allowed(link):
+            time.sleep(DELAY_SECONDS)
+            try:
+                d = parse(fetch(link))
+                title = clean(d.meta.get("og:title") or d.title) or text
+                image = d.meta.get("og:image", "")
+                desc = clean(d.meta.get("og:description") or d.meta.get("description", ""))
+                body = " ".join([title, desc, " ".join(d.text_chunks)[:20000]])
+            except Exception as e:  # keep the link even if the detail page fails
+                log(f"    detail failed {link}: {e}")
+        if image:
+            image = urllib.parse.urljoin(link, image)
+        items.append({
+            "id": item_id(link),
+            "airline": src["id"],
+            "title": title[:200] or link,
+            "description": desc[:400],
+            "url": link,
+            "image": image,
+            "type": classify(f"{link} {title} {desc}"),
+            "deadline": guess_deadline(body, today),
+            "source": "auto",
+        })
+    return items
+
+
+def load_json(path: Path, default):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return default
+
+
+def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: str, today: date) -> list[dict]:
+    """Keep first_seen dates; drop items that vanished more than KEEP_MISSING_DAYS ago."""
+    prev = {p["id"]: p for p in previous}
+    out: dict[str, dict] = {}
+    for it in fresh:
+        old = prev.get(it["id"], {})
+        it["first_seen"] = old.get("first_seen", now)
+        it["last_seen"] = now
+        out[it["id"]] = it
+    cutoff = (datetime.fromisoformat(now) - timedelta(days=KEEP_MISSING_DAYS)).isoformat()
+    for pid, p in prev.items():
+        if pid in out or p.get("source") != "auto":
+            continue
+        # If the airline failed this run, keep its old items untouched.
+        if p["airline"] not in ok_airlines or p.get("last_seen", now) >= cutoff:
+            out[pid] = p
+    # Expired deadlines go away.
+    return [i for i in out.values() if not i.get("deadline") or i["deadline"] >= today.isoformat()]
+
+
+def main() -> int:
+    log = lambda m: print(m, flush=True)
+    sources = load_json(SOURCES, [])
+    now_dt = datetime.now(BKK).replace(microsecond=0)
+    now, today = now_dt.isoformat(), now_dt.date()
+    previous = load_json(OUTPUT, {}).get("items", [])
+
+    fresh, status, ok = [], [], set()
+    for src in sources:
+        log(f"{src['name']}: {src['url']}")
+        try:
+            items = collect_source(src, today, log)
+            fresh.extend(items)
+            ok.add(src["id"])
+            status.append({"airline": src["id"], "ok": True, "count": len(items)})
+        except Exception as e:
+            log(f"  failed: {e}")
+            status.append({"airline": src["id"], "ok": False, "error": str(e)[:200]})
+
+    auto = merge(previous, fresh, ok, now, today)
+
+    manual = []
+    for m in load_json(MANUAL, []):
+        m = dict(m)
+        m.setdefault("id", item_id(m["url"]))
+        m.setdefault("type", classify(f"{m['url']} {m.get('title', '')}"))
+        m.setdefault("first_seen", m.get("added", now))
+        m["source"] = "manual"
+        if not m.get("deadline") or m["deadline"] >= today.isoformat():
+            manual.append(m)
+
+    by_id = {i["id"]: i for i in auto}
+    by_id.update({m["id"]: m for m in manual})   # manual wins over auto
+    items = sorted(by_id.values(), key=lambda i: i.get("first_seen", ""), reverse=True)
+
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT.write_text(json.dumps({
+        "updated": now,
+        "airlines": {s["id"]: {"name": s["name"], "name_th": s["name_th"], "url": s["url"]} for s in sources},
+        "status": status,
+        "items": items,
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+    log(f"Wrote {len(items)} items to {OUTPUT.relative_to(ROOT)}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

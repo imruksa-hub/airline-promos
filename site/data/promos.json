@@ -1,0 +1,67 @@
+{
+ "updated": null,
+ "airlines": {
+  "thai": {
+   "name": "Thai Airways",
+   "name_th": "การบินไทย",
+   "url": "https://www.thaiairways.com/th-th/deals/"
+  },
+  "airasia": {
+   "name": "Thai AirAsia",
+   "name_th": "ไทยแอร์เอเชีย",
+   "url": "https://www.airasia.com/aa/promotions/th/th/"
+  },
+  "nokair": {
+   "name": "Nok Air",
+   "name_th": "นกแอร์",
+   "url": "https://www.nokair.com/promotion"
+  },
+  "lionair": {
+   "name": "Thai Lion Air",
+   "name_th": "ไทยไลอ้อนแอร์",
+   "url": "https://www.lionairthai.com/th/Promotion"
+  },
+  "bangkokair": {
+   "name": "Bangkok Airways",
+   "name_th": "บางกอกแอร์เวย์ส",
+   "url": "https://www.bangkokair.com/th/promotions"
+  },
+  "vietjet": {
+   "name": "Thai Vietjet",
+   "name_th": "ไทยเวียตเจ็ท",
+   "url": "https://www.vietjetair.com/th/pages/promotions"
+  },
+  "scoot": {
+   "name": "Scoot",
+   "name_th": "สกู๊ต",
+   "url": "https://www.flyscoot.com/th/promotions"
+  },
+  "singapore": {
+   "name": "Singapore Airlines",
+   "name_th": "สิงคโปร์แอร์ไลน์",
+   "url": "https://www.singaporeair.com/th_TH/th/plan-travel/promotions/"
+  },
+  "cathay": {
+   "name": "Cathay Pacific",
+   "name_th": "คาเธ่ย์ แปซิฟิค",
+   "url": "https://www.cathaypacific.com/cx/th_TH/offers.html"
+  },
+  "emirates": {
+   "name": "Emirates",
+   "name_th": "เอมิเรตส์",
+   "url": "https://www.emirates.com/th/thai/special-offers/"
+  },
+  "qatar": {
+   "name": "Qatar Airways",
+   "name_th": "กาตาร์แอร์เวย์",
+   "url": "https://www.qatarairways.com/th-th/offers.html"
+  },
+  "ana": {
+   "name": "ANA",
+   "name_th": "ออล นิปปอน แอร์เวย์",
+   "url": "https://www.ana.co.jp/en/th/promotions/"
+  }
+ },
+ "status": [],
+ "items": []
+}

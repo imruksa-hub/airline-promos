@@ -1,0 +1,49 @@
+name: Update promotions and deploy
+
+on:
+  schedule:
+    - cron: "15 */4 * * *"   # every 4 hours (UTC)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ["site/data/promos.json"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run tests
+        run: python -m unittest discover -s tests
+      - name: Collect promotions
+        run: python scraper/collect.py
+      - name: Save collected data
+        run: |
+          if ! git diff --quiet site/data/promos.json; then
+            git config user.name "promo-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add site/data/promos.json
+            git commit -m "Update promotions $(TZ=Asia/Bangkok date '+%Y-%m-%d %H:%M')"
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

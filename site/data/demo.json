@@ -1,0 +1,164 @@
+{
+ "updated": "2026-11-22T09:00:00+07:00",
+ "airlines": {
+  "thai": {
+   "name": "Thai Airways",
+   "name_th": "การบินไทย",
+   "url": "https://www.thaiairways.com/th-th/deals/"
+  },
+  "airasia": {
+   "name": "Thai AirAsia",
+   "name_th": "ไทยแอร์เอเชีย",
+   "url": "https://www.airasia.com/aa/promotions/th/th/"
+  },
+  "nokair": {
+   "name": "Nok Air",
+   "name_th": "นกแอร์",
+   "url": "https://www.nokair.com/promotion"
+  },
+  "lionair": {
+   "name": "Thai Lion Air",
+   "name_th": "ไทยไลอ้อนแอร์",
+   "url": "https://www.lionairthai.com/th/Promotion"
+  },
+  "bangkokair": {
+   "name": "Bangkok Airways",
+   "name_th": "บางกอกแอร์เวย์ส",
+   "url": "https://www.bangkokair.com/th/promotions"
+  },
+  "vietjet": {
+   "name": "Thai Vietjet",
+   "name_th": "ไทยเวียตเจ็ท",
+   "url": "https://www.vietjetair.com/th/pages/promotions"
+  },
+  "scoot": {
+   "name": "Scoot",
+   "name_th": "สกู๊ต",
+   "url": "https://www.flyscoot.com/th/promotions"
+  },
+  "singapore": {
+   "name": "Singapore Airlines",
+   "name_th": "สิงคโปร์แอร์ไลน์",
+   "url": "https://www.singaporeair.com/th_TH/th/plan-travel/promotions/"
+  },
+  "cathay": {
+   "name": "Cathay Pacific",
+   "name_th": "คาเธ่ย์ แปซิฟิค",
+   "url": "https://www.cathaypacific.com/cx/th_TH/offers.html"
+  },
+  "emirates": {
+   "name": "Emirates",
+   "name_th": "เอมิเรตส์",
+   "url": "https://www.emirates.com/th/thai/special-offers/"
+  },
+  "qatar": {
+   "name": "Qatar Airways",
+   "name_th": "กาตาร์แอร์เวย์",
+   "url": "https://www.qatarairways.com/th-th/offers.html"
+  },
+  "ana": {
+   "name": "ANA",
+   "name_th": "ออล นิปปอน แอร์เวย์",
+   "url": "https://www.ana.co.jp/en/th/promotions/"
+  }
+ },
+ "status": [],
+ "items": [
+  {
+   "id": "demo0",
+   "airline": "airasia",
+   "type": "fare",
+   "title": "[ตัวอย่าง] โปรบินในประเทศราคาพิเศษ",
+   "description": "ข้อความตัวอย่างเพื่อแสดงหน้าตาการ์ด",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-22T09:00:00+07:00",
+   "deadline": "2026-11-24",
+   "source": "demo"
+  },
+  {
+   "id": "demo1",
+   "airline": "thai",
+   "type": "fare",
+   "title": "[ตัวอย่าง] ส่วนลดเส้นทางญี่ปุ่น",
+   "description": "ข้อความตัวอย่าง",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-22T09:00:00+07:00",
+   "deadline": "2026-12-12",
+   "source": "demo"
+  },
+  {
+   "id": "demo2",
+   "airline": "nokair",
+   "type": "draw",
+   "title": "[ตัวอย่าง] กิจกรรมลุ้นชิงโชคตั๋วเครื่องบิน",
+   "description": "ข้อความตัวอย่างสำหรับกิจกรรมชิงโชค",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-21T09:00:00+07:00",
+   "deadline": "2026-11-28",
+   "source": "demo"
+  },
+  {
+   "id": "demo3",
+   "airline": "bangkokair",
+   "type": "fare",
+   "title": "[ตัวอย่าง] โปรบินเกาะสมุย",
+   "description": "ข้อความตัวอย่าง",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-20T09:00:00+07:00",
+   "deadline": "2026-12-22",
+   "source": "demo"
+  },
+  {
+   "id": "demo4",
+   "airline": "vietjet",
+   "type": "draw",
+   "title": "[ตัวอย่าง] ร่วมสนุกรับรางวัล",
+   "description": "ข้อความตัวอย่าง",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-22T09:00:00+07:00",
+   "deadline": "2026-11-23",
+   "source": "demo"
+  },
+  {
+   "id": "demo5",
+   "airline": "lionair",
+   "type": "fare",
+   "title": "[ตัวอย่าง] ส่วนลดค่าสัมภาระ",
+   "description": "",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-19T09:00:00+07:00",
+   "deadline": null,
+   "source": "demo"
+  },
+  {
+   "id": "demo6",
+   "airline": "singapore",
+   "type": "fare",
+   "title": "[ตัวอย่าง] ข้อเสนอเส้นทางยุโรป",
+   "description": "ข้อความตัวอย่าง",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-21T09:00:00+07:00",
+   "deadline": "2027-01-06",
+   "source": "demo"
+  },
+  {
+   "id": "demo7",
+   "airline": "emirates",
+   "type": "draw",
+   "title": "[ตัวอย่าง] แคมเปญลุ้นรางวัลสมาชิก",
+   "description": "ข้อความตัวอย่าง",
+   "url": "https://example.com/",
+   "image": "",
+   "first_seen": "2026-11-18T09:00:00+07:00",
+   "deadline": "2026-12-04",
+   "source": "demo"
+  }
+ ]
+}

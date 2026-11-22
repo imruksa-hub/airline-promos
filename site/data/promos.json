@@ -1,5 +1,5 @@
 {
- "updated": null,
+ "updated": "2026-11-22T12:41:29+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -62,6 +62,198 @@
    "url": "https://www.ana.co.jp/en/th/promotions/"
   }
  },
- "status": [],
- "items": []
+ "status": [
+  {
+   "airline": "thai",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "airasia",
+   "ok": true,
+   "count": 1
+  },
+  {
+   "airline": "nokair",
+   "ok": false,
+   "error": "HTTP Error 404: Not Found"
+  },
+  {
+   "airline": "lionair",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "bangkokair",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "vietjet",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "scoot",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "singapore",
+   "ok": false,
+   "error": "HTTP Error 404: Not Found"
+  },
+  {
+   "airline": "cathay",
+   "ok": true,
+   "count": 9
+  },
+  {
+   "airline": "emirates",
+   "ok": false,
+   "error": "The read operation timed out"
+  },
+  {
+   "airline": "qatar",
+   "ok": true,
+   "count": 0
+  },
+  {
+   "airline": "ana",
+   "ok": false,
+   "error": "HTTP Error 404: Not Found"
+  }
+ ],
+ "items": [
+  {
+   "id": "949a65a518d6",
+   "airline": "airasia",
+   "title": "โปรโมชั่นแอร์เอเชียไทย",
+   "description": "",
+   "url": "https://www.airasia.com/promotions/th/th/",
+   "image": "",
+   "type": "fare",
+   "deadline": "2027-09-30",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "54c0d6c42cd3",
+   "airline": "cathay",
+   "title": "Profile",
+   "description": "",
+   "url": "https://www.cathaypacific.com/cx/th_TH/membership/my-account/profile.html?cxsource=MEMBER_PANEL_MY_ACCOUNT_1_1&tab=personal-information.html",
+   "image": "",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "49e7e03ab891",
+   "airline": "cathay",
+   "title": "My rewards",
+   "description": "",
+   "url": "https://www.cathaypacific.com/cx/th_TH/membership/my-account/benefits-and-rewards/my-credited-rewards.html?cxsource=MEMBER_PANEL_MY_ACCOUNT_2_2",
+   "image": "",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "4c9f95ea26e1",
+   "airline": "cathay",
+   "title": "Student Fare | Cathay TH",
+   "description": "",
+   "url": "https://flights.cathaypacific.com/th_TH/offers/cathay-for-students.html",
+   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+   "type": "fare",
+   "deadline": "2027-10-31",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "9e1d4869a580",
+   "airline": "cathay",
+   "title": "EAST Hotel | Cathay TH",
+   "description": "",
+   "url": "https://flights.cathaypacific.com/th_TH/offers/east-hotel.html",
+   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+   "type": "fare",
+   "deadline": "2026-12-31",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "cd20ac351792",
+   "airline": "cathay",
+   "title": "Peak | Cathay TH",
+   "description": "",
+   "url": "https://flights.cathaypacific.com/th_TH/offers/peak.html",
+   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+   "type": "fare",
+   "deadline": "2026-12-31",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "18b0bfee8a64",
+   "airline": "cathay",
+   "title": "Citybus | Cathay TH",
+   "description": "",
+   "url": "https://flights.cathaypacific.com/th_TH/offers/citybus.html",
+   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+   "type": "fare",
+   "deadline": "2027-02-28",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "033d37709acb",
+   "airline": "cathay",
+   "title": "Reasons to book direct | Cathay Pacific",
+   "description": "Learn about the advantages of booking online flight tickets with Cathay Pacific. Book directly with us to experience 24/7 care, transparent fees, & much more.",
+   "url": "https://www.cathaypacific.com/cx/th_TH/book-a-trip/book-flights/reason-to-book-direct.html",
+   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "6e21bc9f08f3",
+   "airline": "cathay",
+   "title": "ค่าโดยสารชั้นประหยัด | Cathay TH",
+   "description": "",
+   "url": "https://www.cathaypacific.com/cx/th_TH/book-a-trip/book-flights/new-economy-fares.html",
+   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  },
+  {
+   "id": "2abef2ec0d8e",
+   "airline": "cathay",
+   "title": "Redeem Flight Awards | Cathay TH",
+   "description": "แลก Asia Miles สำหรับเที่ยวบินกับ Cathay Pacific ค้นหาเที่ยวบินที่พร้อมให้แลกและจองการเดินทางครั้งถัดไปของคุณด้วยไมล์สะสม",
+   "url": "https://www.cathaypacific.com/cx/th_TH/book-a-trip/redeem-flights/redeem-flight-awards.html",
+   "image": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:41:29+07:00",
+   "last_seen": "2026-11-22T12:41:29+07:00"
+  }
+ ]
 }

@@ -27,7 +27,7 @@
     const q = state.q.trim().toLowerCase();
     let items = data.items.filter((i) => inCat(i) &&
       (state.type === "all" || i.type === state.type) &&
-      (state.airline === "all" || i.airline === state.airline) &&
+      (state.airline === "all" || airlineName(i.airline) === airlineName(state.airline)) &&
       (!state.todayOnly || bkkDate(i.first_seen) === todayStr) &&
       (!q || `${i.title} ${i.description} ${airlineName(i.airline)} ${data.airlines[i.airline]?.name || ""}`.toLowerCase().includes(q)));
     if (state.sort === "deadline") {
@@ -68,7 +68,7 @@
     empty.textContent = data.items.length
       ? "ไม่พบรายการที่ตรงกับตัวกรอง"
       : "ยังไม่มีข้อมูล ระบบจะดึงโปรโมชั่นรอบแรกหลังเปิดเว็บ";
-    const count = (t) => data.items.filter((i) => inCat(i) && (t === "all" || i.type === t) && (state.airline === "all" || i.airline === state.airline)).length;
+    const count = (t) => data.items.filter((i) => inCat(i) && (t === "all" || i.type === t) && (state.airline === "all" || airlineName(i.airline) === airlineName(state.airline))).length;
     ["all", "fare", "draw"].forEach((t) => ($("n-" + t).textContent = count(t)));
     document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.type === state.type));
     document.querySelectorAll(".chip").forEach((b) => {
@@ -84,7 +84,9 @@
         { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) + " น.";
     }
     const withItems = new Set(data.items.map((i) => i.airline));
-    const ids = Object.keys(data.airlines).filter((id) => withItems.has(id));
+    const seenNames = new Set();
+    const ids = Object.keys(data.airlines).filter((id) => withItems.has(id))
+      .filter((id) => { const n = airlineName(id); if (seenNames.has(n)) return false; seenNames.add(n); return true; });
     $("airlines").innerHTML = [`<button class="chip" data-airline="all">ทุกแหล่ง</button>`]
       .concat(ids.map((id) => `<button class="chip" data-airline="${esc(id)}">${esc(airlineName(id))}</button>`)).join("");
     $("status").innerHTML = (data.status || []).map((s) =>

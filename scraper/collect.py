@@ -48,7 +48,7 @@ PROMO_WORDS = [
 DRAW_WORDS = [
     "lucky draw", "luckydraw", "lucky-draw", "sweepstake", "giveaway", "contest",
     "win ", "winner", "prize",
-    "ชิงโชค", "ลุ้น", "รางวัล", "แจกฟรี", "ร่วมสนุก", "กิจกรรม",
+    "ชิงโชค", "ลุ้น", "รางวัล", "แจกฟรี", "ร่วมสนุก",
 ]
 NOISE_URL_WORDS = [
     "login", "signin", "sign-in", "logout", "register", "privacy", "cookie", "careers",
@@ -298,6 +298,9 @@ def guess_deadline(text: str, today: date) -> str | None:
 # ------------------------------------------------------------------------- feeds
 
 # News about government lottery results also says "ลุ้นรางวัล"; we only want brand campaigns.
+# A headline must name a giveaway: search engines also match "รอบชิง" + "สุภโชค" for "ชิงโชค".
+FEED_REQUIRE = ["ชิงโชค", "ลุ้นรางวัล", "ลุ้นโชค", "ลุ้นรับ", "ร่วมสนุก", "แจกรางวัล", "ชิงรางวัล",
+                "lucky draw", "giveaway"]
 FEED_EXCLUDE = ["หวย", "สลากกินแบ่ง", "ล็อตเตอรี่", "เลขเด็ด", "งวดนี้", "ตรวจหวย", "lottery"]
 
 
@@ -314,7 +317,7 @@ def collect_feed(src: dict, today: date, log) -> list[dict]:
         title = clean(node.findtext("title"))
         link = clean(node.findtext("link"))
         publisher = clean(node.findtext("source"))
-        if not title or not link or has_word(title.lower(), FEED_EXCLUDE):
+        if not title or not link or has_word(title.lower(), FEED_EXCLUDE) or not has_word(title.lower(), FEED_REQUIRE):
             continue
         try:
             published = parsedate_to_datetime(node.findtext("pubDate")).astimezone(BKK)

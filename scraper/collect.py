@@ -35,7 +35,7 @@ USER_AGENT = "AirlinePromosBot/0.1 (+https://github.com/; personal promotion agg
 TIMEOUT = 25
 DELAY_SECONDS = 2.0          # pause between requests to the same airline
 MAX_DETAIL_PAGES = 12        # detail pages read per airline per run
-KEEP_MISSING_DAYS = 3        # keep an item this long after it disappears from the airline page
+KEEP_MISSING_DAYS = 1        # keep an item this long after it disappears from the airline page
 BKK = timezone(timedelta(hours=7))
 DEBUG = "--debug" in sys.argv
 
@@ -45,7 +45,7 @@ PROMO_WORDS = [
 ]
 DRAW_WORDS = [
     "lucky draw", "luckydraw", "lucky-draw", "sweepstake", "giveaway", "contest",
-    "win ", "winner", "prize", "campaign",
+    "win ", "winner", "prize",
     "ชิงโชค", "ลุ้น", "รางวัล", "แจกฟรี", "ร่วมสนุก", "กิจกรรม",
 ]
 NOISE_URL_WORDS = [
@@ -199,6 +199,13 @@ def classify(text: str) -> str:
     return "draw" if has_word(text, DRAW_WORDS) else "fare"
 
 
+def normalize(url: str) -> str:
+    """Same page, same id: https, lower-case host, no fragment, no trailing space."""
+    parts = urllib.parse.urlsplit(url.strip())
+    scheme = "https" if parts.scheme in ("http", "https") else parts.scheme
+    return urllib.parse.urlunsplit((scheme, parts.netloc.lower(), parts.path, parts.query, ""))
+
+
 def same_site(url: str, base: str) -> bool:
     a = urllib.parse.urlsplit(url).netloc.lower().removeprefix("www.")
     b = urllib.parse.urlsplit(base).netloc.lower().removeprefix("www.")
@@ -211,7 +218,7 @@ def candidate_links(page_url: str, links: list[tuple[str, str]], include: str | 
     for href, text in links:
         if has_word(href, SKIP_WORDS) and not href.startswith("http"):
             continue
-        url = urllib.parse.urljoin(page_url, href).split("#")[0]
+        url = normalize(urllib.parse.urljoin(page_url, href.strip()))
         if not url.startswith("http") or not same_site(url, page_url):
             continue
         if url.rstrip("/") == page_norm or url in seen:
@@ -359,7 +366,8 @@ def load_json(path: Path, default):
         return default
 
 
-def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: str, today: date) -> list[dict]:
+def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: str, today: date,
+          includes: dict[str, str] | None = None) -> list[dict]:
     """Keep first_seen dates; drop items that vanished more than KEEP_MISSING_DAYS ago."""
     prev = {p["id"]: p for p in previous}
     out: dict[str, dict] = {}
@@ -371,6 +379,9 @@ def merge(previous: list[dict], fresh: list[dict], ok_airlines: set[str], now: s
     cutoff = (datetime.fromisoformat(now) - timedelta(days=KEEP_MISSING_DAYS)).isoformat()
     for pid, p in prev.items():
         if pid in out or p.get("source") != "auto" or has_word(p.get("url", "").lower(), NOISE_URL_WORDS):
+            continue
+        include = (includes or {}).get(p["airline"])
+        if include and not re.search(include, p.get("url", "")):
             continue
         # If the airline failed this run, keep its old items untouched.
         if p["airline"] not in ok_airlines or p.get("last_seen", now) >= cutoff:
@@ -398,7 +409,17 @@ def main() -> int:
             log(f"  failed: {e}")
             status.append({"airline": src["id"], "ok": False, "error": str(e)[:200]})
 
-    auto = merge(previous, fresh, ok, now, today)
+    includes = {s["id"]: s["include"] for s in sources if s.get("include")}
+    auto = merge(previous, fresh, ok, now, today, includes)
+    # The same promotion is often linked twice (image and "read more"): keep one per title.
+    seen_titles, unique = set(), []
+    for it in sorted(auto, key=lambda i: i.get("first_seen", "")):
+        key = (it["airline"], it["title"].strip().lower())
+        if key in seen_titles:
+            continue
+        seen_titles.add(key)
+        unique.append(it)
+    auto = unique
 
     manual = []
     for m in load_json(MANUAL, []):

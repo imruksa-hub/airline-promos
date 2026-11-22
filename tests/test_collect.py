@@ -42,5 +42,10 @@ class T(unittest.TestCase):
         out = {i["id"]: i for i in c.merge(prev, fresh, {"x", "y"}, now, date(2026, 11, 22))}
         self.assertNotIn("b", out)  # y ran fine and item b is gone
 
+class Normalize(unittest.TestCase):
+    def test_same_page(self):
+        self.assertEqual(c.normalize("http://Content.Nokair.com/th/a.aspx "), "https://content.nokair.com/th/a.aspx")
+        self.assertEqual(c.normalize("https://x.com/a#top"), "https://x.com/a")
+
 if __name__ == "__main__":
     unittest.main()

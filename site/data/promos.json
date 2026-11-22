@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T12:41:29+07:00",
+ "updated": "2026-11-22T12:47:23+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -14,7 +14,7 @@
   "nokair": {
    "name": "Nok Air",
    "name_th": "นกแอร์",
-   "url": "https://www.nokair.com/promotion"
+   "url": "https://www.nokair.com/"
   },
   "lionair": {
    "name": "Thai Lion Air",
@@ -39,7 +39,7 @@
   "singapore": {
    "name": "Singapore Airlines",
    "name_th": "สิงคโปร์แอร์ไลน์",
-   "url": "https://www.singaporeair.com/th_TH/th/plan-travel/promotions/"
+   "url": "https://www.singaporeair.com/en_UK/th/plan-travel/local-promotions/"
   },
   "cathay": {
    "name": "Cathay Pacific",
@@ -59,7 +59,7 @@
   "ana": {
    "name": "ANA",
    "name_th": "ออล นิปปอน แอร์เวย์",
-   "url": "https://www.ana.co.jp/en/th/promotions/"
+   "url": "https://www.ana.co.jp/en/th/plan-book/promotions/"
   }
  },
  "status": [
@@ -75,8 +75,8 @@
   },
   {
    "airline": "nokair",
-   "ok": false,
-   "error": "HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 5
   },
   {
    "airline": "lionair",
@@ -100,18 +100,18 @@
   },
   {
    "airline": "singapore",
-   "ok": false,
-   "error": "HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 0
   },
   {
    "airline": "cathay",
    "ok": true,
-   "count": 9
+   "count": 4
   },
   {
    "airline": "emirates",
    "ok": false,
-   "error": "The read operation timed out"
+   "error": "Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.emirates.com/th/thai/special-offers/\nCall log:\nnavigating to \"https://www.emirates.com/th/thai/special-offers/\", waiting until \"domcontentloaded"
   },
   {
    "airline": "qatar",
@@ -120,11 +120,76 @@
   },
   {
    "airline": "ana",
-   "ok": false,
-   "error": "HTTP Error 404: Not Found"
+   "ok": true,
+   "count": 0
   }
  ],
  "items": [
+  {
+   "id": "61df6ce4b302",
+   "airline": "nokair",
+   "title": "โปรโมชั่นตั๋วนกแอร์",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษทั้งเส้นทางในประเทศ และต่างประเทศ พร้อมสิทธิพิเศษจากบัตรเครดิตและพันธมิตร",
+   "url": "https://content.nokair.com/th/Booking/Promotion.aspx",
+   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
+   "type": "fare",
+   "deadline": "2027-06-30",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:47:23+07:00",
+   "last_seen": "2026-11-22T12:47:23+07:00"
+  },
+  {
+   "id": "0149cc9e831d",
+   "airline": "nokair",
+   "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "http://content.nokair.com/th/Booking/Promotion/NOKAIRKTC500.aspx",
+   "image": "https://content.nokair.com/getattachment/640eb792-3270-4b39-a2ac-6eb02e1bccbc/.aspx",
+   "type": "fare",
+   "deadline": "2027-06-30",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:47:23+07:00",
+   "last_seen": "2026-11-22T12:47:23+07:00"
+  },
+  {
+   "id": "09b9da57d772",
+   "airline": "nokair",
+   "title": "สิทธิพิเศษเฉพาะสมาชิกบัตรเครดิต KTC MASTERCARD",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "http://content.nokair.com/th/Booking/Promotion/NOKAIRKTC600.aspx",
+   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
+   "type": "fare",
+   "deadline": "2026-12-31",
+   "source": "auto",
+   "first_seen": "2026-11-22T12:47:23+07:00",
+   "last_seen": "2026-11-22T12:47:23+07:00"
+  },
+  {
+   "id": "7d26efe2a68c",
+   "airline": "nokair",
+   "title": "NokAir",
+   "description": "",
+   "url": "https://www.nokair.com/Flight/Lowfare",
+   "image": "",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:47:23+07:00",
+   "last_seen": "2026-11-22T12:47:23+07:00"
+  },
+  {
+   "id": "9799c69234a0",
+   "airline": "nokair",
+   "title": "Redeem - นกแอร์",
+   "description": "สายการบินของคนไทยเพื่อคนไทย สะอาด ปลอดภัย มั่นใจทุกเที่ยวบิน พร้อมมาตรการป้องกันการแพร่ระบาดไวรัส COVID-19 ขั้นสูงสุดตามมาตรฐานสากล เพื่อความปลอดภัยของผู้โดยสารทุกท่าน",
+   "url": "https://content.nokair.com/th/nok-fanclub/Redeem-Point.aspx",
+   "image": "",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T12:47:23+07:00",
+   "last_seen": "2026-11-22T12:47:23+07:00"
+  },
   {
    "id": "949a65a518d6",
    "airline": "airasia",
@@ -136,33 +201,7 @@
    "deadline": "2027-09-30",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
-  },
-  {
-   "id": "54c0d6c42cd3",
-   "airline": "cathay",
-   "title": "Profile",
-   "description": "",
-   "url": "https://www.cathaypacific.com/cx/th_TH/membership/my-account/profile.html?cxsource=MEMBER_PANEL_MY_ACCOUNT_1_1&tab=personal-information.html",
-   "image": "",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
-  },
-  {
-   "id": "49e7e03ab891",
-   "airline": "cathay",
-   "title": "My rewards",
-   "description": "",
-   "url": "https://www.cathaypacific.com/cx/th_TH/membership/my-account/benefits-and-rewards/my-credited-rewards.html?cxsource=MEMBER_PANEL_MY_ACCOUNT_2_2",
-   "image": "",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
+   "last_seen": "2026-11-22T12:47:23+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -175,7 +214,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
+   "last_seen": "2026-11-22T12:47:23+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -188,7 +227,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
+   "last_seen": "2026-11-22T12:47:23+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -201,7 +240,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
+   "last_seen": "2026-11-22T12:47:23+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -214,7 +253,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:41:29+07:00"
+   "last_seen": "2026-11-22T12:47:23+07:00"
   },
   {
    "id": "033d37709acb",

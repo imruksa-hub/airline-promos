@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T04:46:17+07:00",
+ "updated": "2026-11-23T14:28:24+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -199,7 +199,7 @@
   {
    "airline": "vietjet",
    "ok": true,
-   "count": 1
+   "count": 0
   },
   {
    "airline": "scoot",
@@ -239,7 +239,7 @@
   {
    "airline": "news-lunrangwan",
    "ok": true,
-   "count": 2
+   "count": 1
   },
   {
    "airline": "news-luckydraw",
@@ -279,7 +279,7 @@
   {
    "airline": "lotuss",
    "ok": true,
-   "count": 1
+   "count": 2
   },
   {
    "airline": "bigc",
@@ -314,6 +314,32 @@
  ],
  "items": [
   {
+   "id": "8f0ccdb900a4",
+   "airline": "nokair",
+   "title": "สิทธิพิเศษเฉพาะสมาชิกบัตรเครดิต KTC MASTERCARD",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC600.aspx",
+   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
+   "type": "fare",
+   "deadline": "2026-12-31",
+   "source": "auto",
+   "first_seen": "2026-11-23T14:28:24+07:00",
+   "last_seen": "2026-11-23T14:28:24+07:00"
+  },
+  {
+   "id": "b30f00a42a36",
+   "airline": "nokair",
+   "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "https://content.nokair.com/th/Booking/Promotion/NOKAIRKTC500.aspx",
+   "image": "https://content.nokair.com/getattachment/640eb792-3270-4b39-a2ac-6eb02e1bccbc/.aspx",
+   "type": "fare",
+   "deadline": "2027-06-30",
+   "source": "auto",
+   "first_seen": "2026-11-23T14:28:24+07:00",
+   "last_seen": "2026-11-23T14:28:24+07:00"
+  },
+  {
    "id": "4712dd07b720",
    "airline": "lotuss",
    "title": "รับของรางวัลสุดคิ้วท์ พิเศษ! เฉพาะลูกค้า Lotus's",
@@ -324,7 +350,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:43:13+07:00",
-   "last_seen": "2026-11-22T23:14:29+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "4e7b709e5360",
@@ -397,7 +423,7 @@
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "73d4718c8e7d",
@@ -410,7 +436,7 @@
    "deadline": "2026-11-23",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "b9a95a9b4c57",
@@ -423,7 +449,7 @@
    "deadline": "2026-11-23",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "905fe62c3efe",
@@ -436,7 +462,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "e01e58cf0d23",
@@ -449,7 +475,7 @@
    "deadline": "2026-12-13",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "0d88848ceb16",
@@ -475,59 +501,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
-  },
-  {
-   "id": "37b3c18aee79",
-   "airline": "airasia",
-   "title": "FlyBeyond Japan | AirAsia MOVE",
-   "description": "Get exclusive deals and promotions across Japan for your upcoming vacation. AirAsia MOVE brings you the latest flight deals and holiday promotions from Japan.",
-   "url": "https://www.airasia.com/campaigns/flybeyond-japan/th/th/",
-   "image": "https://www.airasia.com/campaigns/api/og?slug=%2Fflybeyond-japan%2Fth%2Fth&locale=en-gb&sig=e797fd49948edc12",
-   "type": "draw",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
-  },
-  {
-   "id": "7b1e1acd7ae6",
-   "airline": "airasia",
-   "title": "Promotions | AirAsia rewards",
-   "description": "Spend, convert or Snap & Earn* to win a dream trip, 50% bonus points and 6X AirAsia points with AirAsia cards",
-   "url": "https://www.airasia.com/rewards/regional-earn-campaign/th/th",
-   "image": "https://storage.googleapis.com/static.airasia.com/incubation/rewards/images/FB_OG_for_rewards_website_GSheet1200X630.png",
-   "type": "draw",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-22T12:55:19+07:00"
-  },
-  {
-   "id": "0149cc9e831d",
-   "airline": "nokair",
-   "title": "บัตรเครดิต KTC เเลกคะเเนนรับโค้ดส่วนลด 500 บาท",
-   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
-   "url": "http://content.nokair.com/th/Booking/Promotion/NOKAIRKTC500.aspx",
-   "image": "https://content.nokair.com/getattachment/640eb792-3270-4b39-a2ac-6eb02e1bccbc/.aspx",
-   "type": "fare",
-   "deadline": "2027-06-30",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:47:23+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
-  },
-  {
-   "id": "09b9da57d772",
-   "airline": "nokair",
-   "title": "สิทธิพิเศษเฉพาะสมาชิกบัตรเครดิต KTC MASTERCARD",
-   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
-   "url": "http://content.nokair.com/th/Booking/Promotion/NOKAIRKTC600.aspx",
-   "image": "https://content.nokair.com/getattachment/df0914f2-afbe-4b7c-a720-ab4eebbac2a4/.aspx",
-   "type": "fare",
-   "deadline": "2026-12-31",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:47:23+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -540,7 +514,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -553,7 +527,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -566,7 +540,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -579,20 +553,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
-  },
-  {
-   "id": "949a65a518d6",
-   "airline": "airasia",
-   "title": "โปรโมชั่นแอร์เอเชียไทย",
-   "description": "",
-   "url": "https://www.airasia.com/promotions/th/th/",
-   "image": "",
-   "type": "fare",
-   "deadline": "2027-09-30",
-   "source": "auto",
-   "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-22T12:47:23+07:00"
+   "last_seen": "2026-11-23T14:28:24+07:00"
   }
  ]
 }

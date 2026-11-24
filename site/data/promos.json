@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T03:08:19+07:00",
+ "updated": "2026-11-24T11:44:23+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -199,7 +199,7 @@
   {
    "airline": "vietjet",
    "ok": true,
-   "count": 2
+   "count": 0
   },
   {
    "airline": "scoot",
@@ -239,7 +239,7 @@
   {
    "airline": "news-lunrangwan",
    "ok": true,
-   "count": 3
+   "count": 4
   },
   {
    "airline": "news-luckydraw",
@@ -274,7 +274,7 @@
   {
    "airline": "seven",
    "ok": true,
-   "count": 2
+   "count": 1
   },
   {
    "airline": "lotuss",
@@ -313,6 +313,21 @@
   }
  ],
  "items": [
+  {
+   "id": "175deafb509f",
+   "airline": "news-lunrangwan",
+   "title": "มาดามแป้ง เปิดศึกปิงปอง SUPER MASTER ชิงแชมป์อาเซียน ลุ้นรางวัลรวม 1.1 ล้าน",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0516d8126a49c0a0e4b869e1ccf55d&url=https%3a%2f%2fwww.msn.com%2fth-th%2fsports%2fother%2f%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%2594%25E0%25B8%25B2%25E0%25B8%25A1%25E0%25B9%2581%25E0%25B8%259B%25E0%25B9%2589%25E0%25B8%2587-%25E0%25B9%2580%25E0%25B8%259B%25E0%25B8%25B4%25E0%25B8%2594%25E0%25B8%25A8%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%259B%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B8%259B%25E0%25B8%25AD%25E0%25B8%2587-super-master-%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B9%2581%25E0%25B8%258A%25E0%25B8%25A1%25E0%25B8%259B%25E0%25B9%258C%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%258B%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%2599-%25E0%25B8%25A5%25E0%25B8%25B8%25E0%25B9%2589%25E0%25B8%2599%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%25A3%25E0%25B8%25A7%25E0%25B8%25A1-11-%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%2far-AA2i1iCq&c=11407952204327031316&mkt=en-ww",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-23T07:55:21+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-24T11:44:23+07:00",
+   "last_seen": "2026-11-24T11:44:23+07:00"
+  },
   {
    "id": "6f07b6d1ed60",
    "airline": "vietjet",
@@ -380,7 +395,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "b30f00a42a36",
@@ -393,7 +408,7 @@
    "deadline": "2027-06-30",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "4712dd07b720",
@@ -479,7 +494,7 @@
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "73d4718c8e7d",
@@ -492,7 +507,33 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
+  },
+  {
+   "id": "905fe62c3efe",
+   "airline": "lotuss",
+   "title": "คริสต์มาสนี้ โค้ก ลุ้นโชคใหญ่ส่งท้ายปี",
+   "description": "สั่งซื้อสินค้าของโลตัส ออนไลน์ Lotus's Online สินค้าอาหารสดคุณภาพ บริการส่งฟรีด่วนใน 1 ชั่วโมง",
+   "url": "https://www.lotuss.com/th/promotion/coke-christmas-12nov-6jan27?utm_track=bt%3AtopBanners%2Cbid%3ACoke-Christmas-W46-Hero-0.jpg",
+   "image": "https://o2o-static.lotuss.com/Landing-page/weekly-brand-promotion/Y2026/WK46/landing-aam/Coke-Christmas-W46-Thumbnail.jpg",
+   "type": "draw",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-24T11:44:23+07:00"
+  },
+  {
+   "id": "e01e58cf0d23",
+   "airline": "cocacola",
+   "title": "แพสชั่นไหนซ่าไปให้สุดกับ \"โค้ก\"",
+   "description": "ลุ้นไปสุดกับประสบการณ์ระดับโลก! บินไปชม Premier League ถึงถิ่นที่อังกฤษ หรือ ลุ้นบัตร Tomorrowland 2026 แค่เลือกแพสชั่นที่ใช่แล้วซ่าไปให้สุดได้เลย!",
+   "url": "https://www.coca-cola.com/th/th/offerings/coke-passion-point",
+   "image": "https://www.coca-cola.com/content/dam/onexp/global/icons/coca-cola-default.png",
+   "type": "draw",
+   "deadline": "2026-12-13",
+   "source": "auto",
+   "first_seen": "2026-11-22T13:23:24+07:00",
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "b9a95a9b4c57",
@@ -508,45 +549,6 @@
    "last_seen": "2026-11-24T03:08:19+07:00"
   },
   {
-   "id": "905fe62c3efe",
-   "airline": "lotuss",
-   "title": "คริสต์มาสนี้ โค้ก ลุ้นโชคใหญ่ส่งท้ายปี",
-   "description": "สั่งซื้อสินค้าของโลตัส ออนไลน์ Lotus's Online สินค้าอาหารสดคุณภาพ บริการส่งฟรีด่วนใน 1 ชั่วโมง",
-   "url": "https://www.lotuss.com/th/promotion/coke-christmas-12nov-6jan27?utm_track=bt%3AtopBanners%2Cbid%3ACoke-Christmas-W46-Hero-0.jpg",
-   "image": "https://o2o-static.lotuss.com/Landing-page/weekly-brand-promotion/Y2026/WK46/landing-aam/Coke-Christmas-W46-Thumbnail.jpg",
-   "type": "draw",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
-  },
-  {
-   "id": "e01e58cf0d23",
-   "airline": "cocacola",
-   "title": "แพสชั่นไหนซ่าไปให้สุดกับ \"โค้ก\"",
-   "description": "ลุ้นไปสุดกับประสบการณ์ระดับโลก! บินไปชม Premier League ถึงถิ่นที่อังกฤษ หรือ ลุ้นบัตร Tomorrowland 2026 แค่เลือกแพสชั่นที่ใช่แล้วซ่าไปให้สุดได้เลย!",
-   "url": "https://www.coca-cola.com/th/th/offerings/coke-passion-point",
-   "image": "https://www.coca-cola.com/content/dam/onexp/global/icons/coca-cola-default.png",
-   "type": "draw",
-   "deadline": "2026-12-13",
-   "source": "auto",
-   "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
-  },
-  {
-   "id": "0d88848ceb16",
-   "airline": "vietjet",
-   "title": "ตั๋วโปรโมชัน",
-   "description": "",
-   "url": "https://www.vietjetair.com/th/news/%E0%B8%95%E0%B8%B1%E0%B9%8B%E0%B8%A7%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B8%99-1697696882961",
-   "image": "",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T12:59:46+07:00",
-   "last_seen": "2026-11-23T04:46:17+07:00"
-  },
-  {
    "id": "ff8eadf4416f",
    "airline": "airasia",
    "title": "AirAsia MOVE | Discover deals on flights, hotels, rides & more",
@@ -557,7 +559,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -570,7 +572,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -583,7 +585,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -596,7 +598,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -609,7 +611,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T03:08:19+07:00"
+   "last_seen": "2026-11-24T11:44:23+07:00"
   }
  ]
 }

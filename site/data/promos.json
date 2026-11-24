@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T11:44:23+07:00",
+ "updated": "2026-11-25T02:29:39+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -199,7 +199,7 @@
   {
    "airline": "vietjet",
    "ok": true,
-   "count": 0
+   "count": 1
   },
   {
    "airline": "scoot",
@@ -239,17 +239,17 @@
   {
    "airline": "news-lunrangwan",
    "ok": true,
-   "count": 4
+   "count": 5
   },
   {
    "airline": "news-luckydraw",
-   "ok": true,
-   "count": 0
+   "ok": false,
+   "error": "not well-formed (invalid token): line 1, column 41"
   },
   {
    "airline": "news-ruamsanuk",
-   "ok": true,
-   "count": 2
+   "ok": false,
+   "error": "not well-formed (invalid token): line 1, column 41"
   },
   {
    "airline": "ktc",
@@ -258,8 +258,8 @@
   },
   {
    "airline": "scb",
-   "ok": true,
-   "count": 0
+   "ok": false,
+   "error": "Page.goto: net::ERR_TOO_MANY_REDIRECTS at https://www.scb.co.th/th/personal-banking/promotions.html\nCall log:\nnavigating to \"https://www.scb.co.th/th/personal-banking/promotions.html\", waiting until \""
   },
   {
    "airline": "kbank",
@@ -313,6 +313,21 @@
   }
  ],
  "items": [
+  {
+   "id": "2d1a08e863a2",
+   "airline": "news-lunrangwan",
+   "title": "วัดชั้นซูเปอร์สตาร์! \"มิคเกลสัน\" นำทัพ 3 แข้งภูมิภาค ลุ้นรางวัล ...",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b05e65e137c4c66a59f5028c245c7c6&url=https%3a%2f%2fwww.siamsport.co.th%2ffootball-thailand%2fthai-national%2f112443%2f&c=16139695147353154864&mkt=en-ww",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-24T14:19:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-25T02:29:39+07:00",
+   "last_seen": "2026-11-25T02:29:39+07:00"
+  },
   {
    "id": "175deafb509f",
    "airline": "news-lunrangwan",
@@ -395,7 +410,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "b30f00a42a36",
@@ -408,20 +423,7 @@
    "deadline": "2027-06-30",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
-  },
-  {
-   "id": "4712dd07b720",
-   "airline": "lotuss",
-   "title": "รับของรางวัลสุดคิ้วท์ พิเศษ! เฉพาะลูกค้า Lotus's",
-   "description": "สั่งซื้อสินค้าของโลตัส ออนไลน์ Lotus's Online สินค้าอาหารสดคุณภาพ บริการส่งฟรีด่วนใน 1 ชั่วโมง",
-   "url": "https://www.lotuss.com/th/promotion/pepsi-x-sofy-19nov-9dec?utm_track=bt%3AtopBanners%2Cbid%3APepsi-x-Sofy_premium-1404x468.jpg",
-   "image": "https://o2o-static.lotuss.com/Landing-page/weekly-brand-promotion/Y2026/WK47/landing-dear/Pepsi-x-Sofy_premium-1000x522.jpg",
-   "type": "draw",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T13:43:13+07:00",
-   "last_seen": "2026-11-23T14:28:24+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "4e7b709e5360",
@@ -494,7 +496,7 @@
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "73d4718c8e7d",
@@ -507,7 +509,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "905fe62c3efe",
@@ -520,7 +522,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "e01e58cf0d23",
@@ -533,7 +535,7 @@
    "deadline": "2026-12-13",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "b9a95a9b4c57",
@@ -559,7 +561,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -572,7 +574,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -585,7 +587,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -598,7 +600,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -611,7 +613,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-24T11:44:23+07:00"
+   "last_seen": "2026-11-25T02:29:39+07:00"
   }
  ]
 }

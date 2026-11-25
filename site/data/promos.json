@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T10:32:27+07:00",
+ "updated": "2026-11-25T21:15:25+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -184,7 +184,7 @@
   {
    "airline": "nokair",
    "ok": true,
-   "count": 2
+   "count": 3
   },
   {
    "airline": "lionair",
@@ -199,7 +199,7 @@
   {
    "airline": "vietjet",
    "ok": true,
-   "count": 1
+   "count": 0
   },
   {
    "airline": "scoot",
@@ -258,8 +258,8 @@
   },
   {
    "airline": "scb",
-   "ok": true,
-   "count": 0
+   "ok": false,
+   "error": "Page.goto: net::ERR_TOO_MANY_REDIRECTS at https://www.scb.co.th/th/personal-banking/promotions.html\nCall log:\nnavigating to \"https://www.scb.co.th/th/personal-banking/promotions.html\", waiting until \""
   },
   {
    "airline": "kbank",
@@ -313,6 +313,19 @@
   }
  ],
  "items": [
+  {
+   "id": "4d1d00af3fac",
+   "airline": "nokair",
+   "title": "404 Not Found",
+   "description": "",
+   "url": "https://content.nokair.com/th/Booking/Promotion/nokairkrungsri.aspx",
+   "image": "",
+   "type": "fare",
+   "deadline": null,
+   "source": "auto",
+   "first_seen": "2026-11-25T21:15:25+07:00",
+   "last_seen": "2026-11-25T21:15:25+07:00"
+  },
   {
    "id": "0d88848ceb16",
    "airline": "vietjet",
@@ -397,7 +410,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "b30f00a42a36",
@@ -410,7 +423,7 @@
    "deadline": "2027-06-30",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "4e7b709e5360",
@@ -483,7 +496,7 @@
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "73d4718c8e7d",
@@ -496,7 +509,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "905fe62c3efe",
@@ -509,7 +522,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "e01e58cf0d23",
@@ -522,7 +535,7 @@
    "deadline": "2026-12-13",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "ff8eadf4416f",
@@ -535,7 +548,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -548,7 +561,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -561,7 +574,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -574,7 +587,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -587,7 +600,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-25T21:15:25+07:00"
   }
  ]
 }

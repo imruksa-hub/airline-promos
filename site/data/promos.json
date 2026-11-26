@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T21:15:25+07:00",
+ "updated": "2026-11-26T07:17:15+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -199,7 +199,7 @@
   {
    "airline": "vietjet",
    "ok": true,
-   "count": 0
+   "count": 1
   },
   {
    "airline": "scoot",
@@ -248,8 +248,8 @@
   },
   {
    "airline": "news-ruamsanuk",
-   "ok": true,
-   "count": 2
+   "ok": false,
+   "error": "not well-formed (invalid token): line 1, column 41"
   },
   {
    "airline": "ktc",
@@ -258,8 +258,8 @@
   },
   {
    "airline": "scb",
-   "ok": false,
-   "error": "Page.goto: net::ERR_TOO_MANY_REDIRECTS at https://www.scb.co.th/th/personal-banking/promotions.html\nCall log:\nnavigating to \"https://www.scb.co.th/th/personal-banking/promotions.html\", waiting until \""
+   "ok": true,
+   "count": 0
   },
   {
    "airline": "kbank",
@@ -279,7 +279,7 @@
   {
    "airline": "lotuss",
    "ok": true,
-   "count": 1
+   "count": 2
   },
   {
    "airline": "bigc",
@@ -314,17 +314,30 @@
  ],
  "items": [
   {
-   "id": "4d1d00af3fac",
-   "airline": "nokair",
-   "title": "404 Not Found",
-   "description": "",
-   "url": "https://content.nokair.com/th/Booking/Promotion/nokairkrungsri.aspx",
-   "image": "",
-   "type": "fare",
+   "id": "4712dd07b720",
+   "airline": "lotuss",
+   "title": "รับของรางวัลสุดคิ้วท์ พิเศษ! เฉพาะลูกค้า Lotus's",
+   "description": "สั่งซื้อสินค้าของโลตัส ออนไลน์ Lotus's Online สินค้าอาหารสดคุณภาพ บริการส่งฟรีด่วนใน 1 ชั่วโมง",
+   "url": "https://www.lotuss.com/th/promotion/pepsi-x-sofy-19nov-9dec?utm_track=bt%3AtopBanners%2Cbid%3APepsi-x-Sofy_premium-1404x468.jpg",
+   "image": "https://o2o-static.lotuss.com/Landing-page/weekly-brand-promotion/Y2026/WK47/landing-dear/Pepsi-x-Sofy_premium-1000x522.jpg",
+   "type": "draw",
    "deadline": null,
    "source": "auto",
+   "first_seen": "2026-11-26T07:17:15+07:00",
+   "last_seen": "2026-11-26T07:17:15+07:00"
+  },
+  {
+   "id": "4d1d00af3fac",
+   "airline": "nokair",
+   "title": "กรุงศรีช่วยคุณเปย์เซฟ รับเครดิตเงินคืนสูงสุด 3%*",
+   "description": "พบข้อเสนอตั๋วเครื่องบินราคาพิเศษ บินไปกับนกแอร์ บริการดี มีแต่รอยยิ้ม เครื่องใหม่ ที่นั่งกว้าง",
+   "url": "https://content.nokair.com/th/Booking/Promotion/nokairkrungsri.aspx",
+   "image": "https://content.nokair.com/getattachment/130ab788-2e9d-4365-856d-d13018ee37ac/.aspx",
+   "type": "fare",
+   "deadline": "2027-02-28",
+   "source": "auto",
    "first_seen": "2026-11-25T21:15:25+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "0d88848ceb16",
@@ -337,7 +350,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-25T10:32:27+07:00",
-   "last_seen": "2026-11-25T10:32:27+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "2d1a08e863a2",
@@ -410,7 +423,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "b30f00a42a36",
@@ -423,7 +436,7 @@
    "deadline": "2027-06-30",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "4e7b709e5360",
@@ -489,14 +502,14 @@
    "id": "3ea7d8a5af5b",
    "airline": "ktc",
    "title": "โปรโมชั่นเคลียร์หนี้เกลี้ยงรอบใหม่ แจกแล้วทั่วไทย ได้ลุ้นตลอดปี มากกว่า 600 รางวัล เคลียร์หนี้ ปี 69 กับ KTC PROUD",
-   "description": "โปรโมชั่น เคลียร์หนี้ 69 ดูรายละเอียดและเงื่อนไขโปรโมชั่นเพิ่มเติมได้ที่นี่เลย",
+   "description": "โปรโมชั่น ดูรายละเอียดและเงื่อนไขโปรโมชั่นเพิ่มเติมได้ที่นี่เลย",
    "url": "https://www.ktc.co.th/promotion/apply-credit-card-loan-offers/ktc-proud-cash-card/cleardebt69",
    "image": "https://www.ktc.co.th/upload/pub/media/Promotion/cash-card/2024/AW_NOV24_337_Clear_Debt_68_BANNER_WEBSITE_KTC_3_SMALL_BANNER_379x285_KV.webp",
    "type": "draw",
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "73d4718c8e7d",
@@ -509,7 +522,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "905fe62c3efe",
@@ -522,7 +535,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "e01e58cf0d23",
@@ -535,7 +548,7 @@
    "deadline": "2026-12-13",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "ff8eadf4416f",
@@ -548,7 +561,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -561,7 +574,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -574,7 +587,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -587,7 +600,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -600,7 +613,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-25T21:15:25+07:00"
+   "last_seen": "2026-11-26T07:17:15+07:00"
   }
  ]
 }

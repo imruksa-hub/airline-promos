@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T20:50:50+07:00",
+ "updated": "2026-11-27T07:33:56+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -249,7 +249,7 @@
   {
    "airline": "news-ruamsanuk",
    "ok": true,
-   "count": 1
+   "count": 0
   },
   {
    "airline": "ktc",
@@ -258,8 +258,8 @@
   },
   {
    "airline": "scb",
-   "ok": false,
-   "error": "Page.goto: net::ERR_TOO_MANY_REDIRECTS at https://www.scb.co.th/th/personal-banking/promotions.html\nCall log:\nnavigating to \"https://www.scb.co.th/th/personal-banking/promotions.html\", waiting until \""
+   "ok": true,
+   "count": 0
   },
   {
    "airline": "kbank",
@@ -314,6 +314,21 @@
  ],
  "items": [
   {
+   "id": "f3f8c2daba4d",
+   "airline": "news-lunrangwan",
+   "title": "Yadea ยกทัพตัวท็อป ลุย Motor Expo 2026 พร้อมลุ้นรางวัลกว่า 7.7 แสน [TIME2026]",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b08d0a473794aeebb3bdbedcb734681&url=https%3a%2f%2fwww.motorival.com%2fyadea-time2026%2f&c=15492911136507143742&mkt=en-ww",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-26T14:59:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-27T07:33:56+07:00",
+   "last_seen": "2026-11-27T07:33:56+07:00"
+  },
+  {
    "id": "4712dd07b720",
    "airline": "lotuss",
    "title": "รับของรางวัลสุดคิ้วท์ พิเศษ! เฉพาะลูกค้า Lotus's",
@@ -324,7 +339,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-26T07:17:15+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "4d1d00af3fac",
@@ -337,20 +352,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-25T21:15:25+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
-  },
-  {
-   "id": "0d88848ceb16",
-   "airline": "vietjet",
-   "title": "Vietjet Air | Bay là thích ngay! | Website chính thức",
-   "description": "Bay cùng Vietjet với hàng ngàn ưu đãi hấp dẫn, giá vé ưu đãi",
-   "url": "https://www.vietjetair.com/th/news/%E0%B8%95%E0%B8%B1%E0%B9%8B%E0%B8%A7%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%8A%E0%B8%B1%E0%B8%99-1697696882961",
-   "image": "",
-   "type": "fare",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-25T10:32:27+07:00",
-   "last_seen": "2026-11-26T07:17:15+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "2d1a08e863a2",
@@ -423,7 +425,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "b30f00a42a36",
@@ -436,7 +438,7 @@
    "deadline": "2027-06-30",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "4e7b709e5360",
@@ -509,7 +511,7 @@
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "905fe62c3efe",
@@ -522,7 +524,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "e01e58cf0d23",
@@ -535,20 +537,7 @@
    "deadline": "2026-12-13",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
-  },
-  {
-   "id": "73d4718c8e7d",
-   "airline": "seven",
-   "title": "ภารกิจพิชิตรางวัล ช้อปครบรับเงินคืน",
-   "description": "24 ต.ค. - 23 พ.ย. 69",
-   "url": "https://www.7eleven.co.th/promotion/allmember/2348-mission",
-   "image": "https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/96fd592925414b8997746aae640d5527.jpg",
-   "type": "draw",
-   "deadline": null,
-   "source": "auto",
-   "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-26T07:17:15+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "ff8eadf4416f",
@@ -561,7 +550,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -574,7 +563,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -587,7 +576,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -600,7 +589,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -613,7 +602,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-26T20:50:50+07:00"
+   "last_seen": "2026-11-27T07:33:56+07:00"
   }
  ]
 }

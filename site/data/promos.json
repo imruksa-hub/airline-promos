@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T07:33:56+07:00",
+ "updated": "2026-11-27T20:48:37+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -258,8 +258,8 @@
   },
   {
    "airline": "scb",
-   "ok": true,
-   "count": 0
+   "ok": false,
+   "error": "Page.goto: net::ERR_TOO_MANY_REDIRECTS at https://www.scb.co.th/th/personal-banking/promotions.html\nCall log:\nnavigating to \"https://www.scb.co.th/th/personal-banking/promotions.html\", waiting until \""
   },
   {
    "airline": "kbank",
@@ -339,7 +339,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-26T07:17:15+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "4d1d00af3fac",
@@ -352,7 +352,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-25T21:15:25+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "2d1a08e863a2",
@@ -425,7 +425,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "b30f00a42a36",
@@ -438,7 +438,7 @@
    "deadline": "2027-06-30",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "4e7b709e5360",
@@ -511,7 +511,7 @@
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "905fe62c3efe",
@@ -524,7 +524,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "e01e58cf0d23",
@@ -537,7 +537,7 @@
    "deadline": "2026-12-13",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "ff8eadf4416f",
@@ -550,7 +550,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -563,7 +563,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -576,7 +576,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -589,7 +589,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -602,7 +602,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T07:33:56+07:00"
+   "last_seen": "2026-11-27T20:48:37+07:00"
   }
  ]
 }

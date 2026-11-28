@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T20:48:37+07:00",
+ "updated": "2026-11-28T07:00:47+07:00",
  "airlines": {
   "thai": {
    "name": "Thai Airways",
@@ -234,7 +234,7 @@
   {
    "airline": "news-chingchok",
    "ok": true,
-   "count": 0
+   "count": 1
   },
   {
    "airline": "news-lunrangwan",
@@ -258,8 +258,8 @@
   },
   {
    "airline": "scb",
-   "ok": false,
-   "error": "Page.goto: net::ERR_TOO_MANY_REDIRECTS at https://www.scb.co.th/th/personal-banking/promotions.html\nCall log:\nnavigating to \"https://www.scb.co.th/th/personal-banking/promotions.html\", waiting until \""
+   "ok": true,
+   "count": 0
   },
   {
    "airline": "kbank",
@@ -314,6 +314,21 @@
  ],
  "items": [
   {
+   "id": "ec3aa0eed8fd",
+   "airline": "news-chingchok",
+   "title": "มุมภาษี : ภาษีรางวัลชิงโชคของธุรกิจค้าอสังหาริมทรัพย์",
+   "description": "",
+   "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0a1a65712b434891f3621c87447187&url=https%3a%2f%2fwww.dailynews.co.th%2fnews%2f2013458%2f&c=6604167021369974268&mkt=en-ww",
+   "image": "",
+   "type": "draw",
+   "deadline": null,
+   "published": "2026-11-22T11:26:00+07:00",
+   "kind": "feed",
+   "source": "auto",
+   "first_seen": "2026-11-28T07:00:47+07:00",
+   "last_seen": "2026-11-28T07:00:47+07:00"
+  },
+  {
    "id": "f3f8c2daba4d",
    "airline": "news-lunrangwan",
    "title": "Yadea ยกทัพตัวท็อป ลุย Motor Expo 2026 พร้อมลุ้นรางวัลกว่า 7.7 แสน [TIME2026]",
@@ -339,7 +354,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-26T07:17:15+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "4d1d00af3fac",
@@ -352,7 +367,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-25T21:15:25+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "2d1a08e863a2",
@@ -425,7 +440,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "b30f00a42a36",
@@ -438,7 +453,7 @@
    "deadline": "2027-06-30",
    "source": "auto",
    "first_seen": "2026-11-23T14:28:24+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "4e7b709e5360",
@@ -511,7 +526,7 @@
    "deadline": "2027-02-20",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "905fe62c3efe",
@@ -524,7 +539,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "e01e58cf0d23",
@@ -537,7 +552,7 @@
    "deadline": "2026-12-13",
    "source": "auto",
    "first_seen": "2026-11-22T13:23:24+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "ff8eadf4416f",
@@ -550,7 +565,7 @@
    "deadline": null,
    "source": "auto",
    "first_seen": "2026-11-22T12:51:17+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "4c9f95ea26e1",
@@ -563,7 +578,7 @@
    "deadline": "2027-10-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "9e1d4869a580",
@@ -576,7 +591,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "cd20ac351792",
@@ -589,7 +604,7 @@
    "deadline": "2026-12-31",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   },
   {
    "id": "18b0bfee8a64",
@@ -602,7 +617,7 @@
    "deadline": "2027-02-28",
    "source": "auto",
    "first_seen": "2026-11-22T12:41:29+07:00",
-   "last_seen": "2026-11-27T20:48:37+07:00"
+   "last_seen": "2026-11-28T07:00:47+07:00"
   }
  ]
 }
